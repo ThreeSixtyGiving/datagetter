@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='Threesixtygiving Datagetter',
+    name='datagetter',
     version='0.1.0',
     author='Open Data Services',
     author_email='contact@opendataservices.coop',
