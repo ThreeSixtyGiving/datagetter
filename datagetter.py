@@ -11,6 +11,8 @@ def main():
     parser.add_argument('--no-validate', dest='validate', action='store_false')
     parser.add_argument('--data-dir', dest='data_dir', action='store',
                         default="data")
+    parser.add_argument('--threads', dest='threads', action='store', type=int,
+                        default=4)
 
     args = parser.parse_args()
 
