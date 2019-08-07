@@ -201,7 +201,7 @@ def get(args):
     else:
         data_all = json.load(open('%s/data_all.json' % args.data_dir))
 
-    with Pool(8) as process_pool:
+    with Pool(args.threads) as process_pool:
         process_pool.starmap(fetch_and_convert, zip(itertools.repeat(args),
                                                     data_all))
 
