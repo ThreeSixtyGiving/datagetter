@@ -118,7 +118,7 @@ def fetch_and_convert(args, dataset):
             if isinstance(e, KeyboardInterrupt):
                 raise
 
-            print("\n\nDownload failed for dataset {}\n".format(dataset['identifier']))
+            print("\n\nDownload {} failed for dataset {}\n".format(url, dataset['identifier']))
             traceback.print_exc()
             metadata['downloads'] = False
             metadata['error'] = str(e)
