@@ -7,6 +7,7 @@ import shutil
 import traceback
 import strict_rfc3339
 import rfc6266  # (content-disposition header parser)
+import itertools
 from jsonschema import validate, ValidationError, FormatChecker
 from multiprocessing.dummy import Pool
 
@@ -199,7 +200,6 @@ def fetch_and_convert(args, dataset):
                     '{}/json_acceptable_license/{}.json'.format(args.data_dir, dataset['identifier']))
             data_acceptable_license.append(dataset)
 
-import itertools
 
 def get(args):
     mkdirs(args.data_dir)
