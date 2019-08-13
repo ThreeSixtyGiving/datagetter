@@ -13,6 +13,9 @@ def main():
                         default="data")
     parser.add_argument('--threads', dest='threads', action='store', type=int,
                         default=4)
+    parser.add_argument('--socks5', dest='socks5_proxy', action='store',
+                        help="Use a socks5 proxy to fetch publisher data. Example --socks5=socks5://host:port",
+                        default=None)
 
     args = parser.parse_args()
 

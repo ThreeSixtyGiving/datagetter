@@ -95,10 +95,21 @@ def fetch_and_convert(args, dataset):
     url = dataset['distribution'][0]['downloadURL']
 
     if args.download:
+        proxies = None
         metadata['datetime_downloaded'] = strict_rfc3339.now_to_rfc3339_localoffset()
+        if args.socks5_proxy:
+            proxies = {
+                'http': args.socks5_proxy,
+                'https': args.socks5_proxy,
+            }
+
         try:
             print("Fetching %s" % url)
-            r = requests.get(url, headers={'User-Agent': 'datagetter (https://github.com/ThreeSixtyGiving/datagetter)'})
+            r = requests.get(
+                url,
+                headers={'User-Agent': 'datagetter (https://github.com/ThreeSixtyGiving/datagetter)'},
+                proxies=proxies
+            )
             r.raise_for_status()
 
             metadata['downloads'] = True
