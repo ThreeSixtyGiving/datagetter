@@ -1,15 +1,16 @@
-import requests
-import json
-import flattentool
-import os
-import tempfile
-import shutil
-import traceback
-import strict_rfc3339
-import rfc6266  # (content-disposition header parser)
 import itertools
-from jsonschema import validate, ValidationError, FormatChecker
+import json
+import os
+import shutil
+import tempfile
+import traceback
 from multiprocessing.dummy import Pool
+
+import flattentool
+import requests
+import rfc6266  # (content-disposition header parser)
+import strict_rfc3339
+from jsonschema import validate, ValidationError, FormatChecker
 
 acceptable_licenses = [
     'http://www.opendefinition.org/licenses/odc-pddl',
