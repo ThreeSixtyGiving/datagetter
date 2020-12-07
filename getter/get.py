@@ -136,7 +136,20 @@ def fetch_and_convert(args, dataset):
         if file_type not in CONTENT_TYPE_MAP.values():
             print("\n\nUnrecognised file type {}\n".format(file_type))
             return
+
+        # Check that the downloaded json file is valid json and not junk from the webserver
+        # e.g. a 500 error being output without the proper status code.
+        if file_type == "json":
+            try:
+                json.loads(r.text)
+            except ValueError:
+                print("\n\nJSON file provided by webserver is invalid")
+                metadata['downloads'] = False
+                metadata['error'] = "Invalid JSON file provided by webserver"
+                return
+
         metadata['file_type'] = file_type
+
         file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
         with open(file_name, 'wb') as fp:
             fp.write(r.content)
