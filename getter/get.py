@@ -76,12 +76,12 @@ def convert_spreadsheet(input_path, converted_path, file_type):
     )
 
 
-def mkdirs(data_dir):
-    os.mkdir(data_dir)
+def mkdirs(data_dir, exist_ok=False):
+    os.makedirs(data_dir, exist_ok=exist_ok)
     for dir_name in ['original', 'json_all', 'json_valid',
                      'json_acceptable_license',
                      'json_acceptable_license_valid']:
-        os.mkdir("%s/%s" % (data_dir, dir_name))
+        os.makedirs("%s/%s" % (data_dir, dir_name), exist_ok=exist_ok)
 
 
 def fetch_and_convert(args, dataset):
@@ -202,15 +202,20 @@ def fetch_and_convert(args, dataset):
 
 
 def get(args):
-    mkdirs(args.data_dir)
 
-    if args.download:
+    if args.local_registry or not args.download:
+        mkdirs(args.data_dir, True)
+        data_all = json.load(open('%s/data_all.json' % args.data_dir))
+
+    elif args.download:
+        mkdirs(args.data_dir, False)
         r = requests.get('http://data.threesixtygiving.org/data.json')
         with open('%s/data_original.json' % args.data_dir, 'w') as fp:
             fp.write(r.text)
         data_all = r.json()
     else:
-        data_all = json.load(open('%s/data_all.json' % args.data_dir))
+        print("No source for data")
+        exit(1)
 
     with Pool(args.threads) as process_pool:
         process_pool.starmap(fetch_and_convert, zip(itertools.repeat(args),
