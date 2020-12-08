@@ -5,11 +5,8 @@ Scripts to download the data from the http://data.threesixtygiving.org registry
 
 Install dependencies:
 
-```
-# This script creates a new python virtual envionment and installs requirements.txt
-$ ./update_requirements.sh
-```
-Or manually
+The datagetter is tested to run on python3.6
+
 ```
 # Create a new python3 virtual environment
 $ virtualenv --python python3 .ve
