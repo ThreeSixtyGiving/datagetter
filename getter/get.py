@@ -204,13 +204,7 @@ def fetch_and_convert(args, dataset):
 def get(args):
     mkdirs(args.data_dir)
 
-    if args.download:
-        r = requests.get('http://data.threesixtygiving.org/data.json')
-        with open('%s/data_original.json' % args.data_dir, 'w') as fp:
-            fp.write(r.text)
-        data_all = r.json()
-    else:
-        data_all = json.load(open('%s/data_all.json' % args.data_dir))
+    data_all = json.load(open("registry.json"))
 
     with Pool(args.threads) as process_pool:
         process_pool.starmap(fetch_and_convert, zip(itertools.repeat(args),
