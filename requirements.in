@@ -1,4 +1,4 @@
--e git+https://github.com/OpenDataServices/flatten-tool.git@v0.8.0#egg=flattentool
+flattentool>=0.16.0
 jsonschema
 strict-rfc3339
 rfc3987
