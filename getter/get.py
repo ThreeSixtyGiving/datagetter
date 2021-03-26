@@ -33,7 +33,8 @@ unacceptable_licenses = [
 CONTENT_TYPE_MAP = {
     'application/json': 'json',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
-    'text/csv': 'csv'
+    'text/csv': 'csv',
+    "application/vnd.oasis.opendocument.spreadsheet": "ods"
 }
 
 schema = json.loads(requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-package-schema.json').text)
