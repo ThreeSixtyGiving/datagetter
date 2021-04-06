@@ -156,6 +156,13 @@ def fetch_and_convert(args, dataset):
         with open(file_name, 'wb') as fp:
             fp.write(r.content)
     else:
+        # --no-download arg
+
+        # We require the metadata to exist, it won't if the file failed to download correctly
+        if metadata['downloads'] == False:
+            print("Skipping %s as it was not marked as successfully downloaded" % dataset['identifier'])
+            return
+
         file_type = metadata['file_type']
         file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
 
