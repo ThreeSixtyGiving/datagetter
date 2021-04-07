@@ -24,6 +24,13 @@ def main():
                         help="Use a socks5 proxy to fetch publisher data. Example --socks5=socks5://host:port",
                         default=None)
 
+    parser.add_argument('--limit-downloads', dest='limit_downloads', action='store',
+                        type=int,
+                        help="Limit the number of file downloads",
+                        default=None)
+
+
+
     args = parser.parse_args()
 
     get(args)
