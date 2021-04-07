@@ -17,4 +17,4 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/requirements_dev.txt') }}
 
     - run: pip install .
-    - run: datagetter.py --help
+    - run: datagetter.py --limit-downloads 8
