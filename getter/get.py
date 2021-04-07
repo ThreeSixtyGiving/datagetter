@@ -231,13 +231,18 @@ def get(args):
 
     elif args.download:
         mkdirs(args.data_dir, False)
-        r = requests.get('http://data.threesixtygiving.org/data.json')
+        r = requests.get('https://data.threesixtygiving.org/data.json')
         with open('%s/data_original.json' % args.data_dir, 'w') as fp:
             fp.write(r.text)
         data_all = r.json()
+
     else:
         print("No source for data")
         exit(1)
+
+
+    if args.limit_downloads:
+        data_all = data_all[:args.limit_downloads]
 
     with Pool(args.threads) as process_pool:
         process_pool.starmap(fetch_and_convert, zip(itertools.repeat(args),
