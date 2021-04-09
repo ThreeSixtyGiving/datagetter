@@ -30,8 +30,12 @@ idna==2.10
     # via requests
 ijson==3.1.4
     # via flattentool
-importlib-metadata==3.10.0
-    # via jsonschema
+importlib-metadata==1.7.0
+    # via
+    #   -r requirements.in
+    #   jsonschema
+jdcal==1.4.1
+    # via openpyxl
 jsonref==0.2
     # via flattentool
 jsonschema==3.2.0
@@ -42,8 +46,10 @@ lxml==4.6.3
     # via flattentool
 odfpy==1.4.1
     # via flattentool
-openpyxl==3.0.7
-    # via flattentool
+openpyxl==2.6.4
+    # via
+    #   -r requirements.in
+    #   flattentool
 persistent==4.6.4
     # via
     #   btrees
@@ -72,8 +78,6 @@ strict-rfc3339==0.7
     # via -r requirements.in
 transaction==3.0.1
     # via zodb
-typing-extensions==3.7.4.3
-    # via importlib-metadata
 urllib3==1.26.4
     # via requests
 xmltodict==0.12.0
@@ -84,8 +88,10 @@ zc.zlibstorage==1.2.0
     # via flattentool
 zconfig==3.5.0
     # via zodb
-zipp==3.4.1
-    # via importlib-metadata
+zipp==1.2.0
+    # via
+    #   -r requirements.in
+    #   importlib-metadata
 zodb==5.6.0
     # via
     #   flattentool
