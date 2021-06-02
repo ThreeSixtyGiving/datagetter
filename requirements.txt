@@ -31,9 +31,7 @@ idna==2.10
 ijson==3.1.4
     # via flattentool
 importlib-metadata==1.7.0
-    # via
-    #   -r requirements.in
-    #   jsonschema
+    # via -r requirements.in
 jdcal==1.4.1
     # via openpyxl
 jsonref==0.2
@@ -78,7 +76,7 @@ strict-rfc3339==0.7
     # via -r requirements.in
 transaction==3.0.1
     # via zodb
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
 xmltodict==0.12.0
     # via flattentool
