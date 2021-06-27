@@ -187,10 +187,12 @@ def fetch_and_convert(args, dataset):
                     file_type)
             except KeyboardInterrupt:
                 raise
-            except:
+            except Exception:
                 print("\n\nUnflattening failed for file {}\n".format(file_name))
                 traceback.print_exc()
                 metadata['json'] = None
+                metadata["valid"] = False
+                metadata["error"] = "Could not unflatten file"
             else:
                 metadata['json'] = json_file_name
 
