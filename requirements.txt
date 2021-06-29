@@ -4,27 +4,27 @@
 #
 #    pip-compile requirements.in
 #
-attrs==20.3.0
+attrs==21.2.0
     # via
     #   -r requirements.in
     #   jsonschema
 backports-datetime-fromisoformat==1.0.0
     # via flattentool
-btrees==4.7.2
+btrees==4.9.2
     # via zodb
-certifi==2020.12.5
+certifi==2021.5.30
     # via requests
 cffi==1.14.5
     # via persistent
 chardet==4.0.0
     # via requests
-contextlib2==0.6.0.post1
+contextlib2==21.6.0
     # via schema
 defusedxml==0.7.1
     # via odfpy
-et-xmlfile==1.0.1
+et-xmlfile==1.1.0
     # via openpyxl
-flattentool==0.16.0
+flattentool==0.17.0
     # via -r requirements.in
 idna==2.10
     # via requests
@@ -50,13 +50,13 @@ openpyxl==2.6.4
     # via
     #   -r requirements.in
     #   flattentool
-persistent==4.6.4
+persistent==4.7.0
     # via
     #   btrees
     #   zodb
 pycparser==2.20
     # via cffi
-pyrsistent==0.17.3
+pyrsistent==0.18.0
     # via jsonschema
 pysocks==1.7.1
     # via requests
@@ -70,7 +70,7 @@ rfc6266==0.0.4
     # via -r requirements.in
 schema==0.7.4
     # via flattentool
-six==1.15.0
+six==1.16.0
     # via
     #   jsonschema
     #   zodb
@@ -78,7 +78,7 @@ strict-rfc3339==0.7
     # via -r requirements.in
 transaction==3.0.1
     # via zodb
-urllib3==1.26.4
+urllib3==1.26.6
     # via requests
 xmltodict==0.12.0
     # via flattentool
@@ -86,7 +86,7 @@ zc.lockfile==2.0
     # via zodb
 zc.zlibstorage==1.2.0
     # via flattentool
-zconfig==3.5.0
+zconfig==3.6.0
     # via zodb
 zipp==1.2.0
     # via
@@ -98,7 +98,7 @@ zodb==5.6.0
     #   zc.zlibstorage
 zodbpickle==2.0.0
     # via zodb
-zope.interface==5.3.0
+zope.interface==5.4.0
     # via
     #   btrees
     #   persistent
