@@ -37,14 +37,14 @@ CONTENT_TYPE_MAP = {
     "application/vnd.oasis.opendocument.spreadsheet": "ods"
 }
 
-schema = json.loads(requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-package-schema.json').text)
+package_schema = json.loads(requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-package-schema.json').text)
 
 data_valid = []
 data_acceptable_license = []
 data_acceptable_license_valid = []
 
 
-def convert_spreadsheet(input_path, converted_path, file_type):
+def convert_spreadsheet(input_path, converted_path, file_type, schema_path):
     encoding = 'utf-8-sig'
     if file_type == 'csv':
         tmp_dir = tempfile.mkdtemp()
@@ -63,13 +63,14 @@ def convert_spreadsheet(input_path, converted_path, file_type):
         input_name = tmp_dir
     else:
         input_name = input_path
+
     flattentool.unflatten(
         input_name,
         output_name=converted_path,
         input_format=file_type,
         root_list_path='grants',
         root_id='',
-        schema='https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-schema.json',
+        schema=schema_path,
         convert_titles=True,
         encoding=encoding,
         metatab_schema='https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-package-schema.json',
@@ -86,7 +87,7 @@ def mkdirs(data_dir, exist_ok=False):
         os.makedirs("%s/%s" % (data_dir, dir_name), exist_ok=exist_ok)
 
 
-def fetch_and_convert(args, dataset):
+def fetch_and_convert(args, dataset, schema_path):
     r = None
 
     metadata = dataset.get('datagetter_metadata', {})
@@ -184,7 +185,9 @@ def fetch_and_convert(args, dataset):
                 convert_spreadsheet(
                     file_name,
                     json_file_name,
-                    file_type)
+                    file_type,
+                    schema_path
+                    )
             except KeyboardInterrupt:
                 raise
             except Exception:
@@ -204,7 +207,7 @@ def fetch_and_convert(args, dataset):
         if args.validate:
             try:
                 with open(json_file_name, 'r') as fp:
-                    validate(json.load(fp), schema, format_checker=format_checker)
+                    validate(json.load(fp), package_schema, format_checker=format_checker)
             except (ValidationError, ValueError):
                 metadata['valid'] = False
             else:
@@ -223,6 +226,15 @@ def fetch_and_convert(args, dataset):
             os.link(json_file_name,
                     '{}/json_acceptable_license/{}.json'.format(args.data_dir, dataset['identifier']))
             data_acceptable_license.append(dataset)
+
+
+def file_cache_schema():
+    tmp_dir = tempfile.mkdtemp()
+    schema_path = os.path.join(tmp_dir, '360-giving-schema.json')
+    schema = requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-schema.json')
+    with open(schema_path, 'w') as fp:
+        fp.write(schema.text)
+    return schema_path
 
 
 def get(args):
@@ -246,9 +258,11 @@ def get(args):
     if args.limit_downloads:
         data_all = data_all[:args.limit_downloads]
 
+    schema_path = file_cache_schema()
+
     with Pool(args.threads) as process_pool:
         process_pool.starmap(fetch_and_convert, zip(itertools.repeat(args),
-                                                    data_all))
+                                                    data_all, itertools.repeat(schema_path)))
 
     # Output data.json after every dataset, to help with debugging if we fail
     # part way through
