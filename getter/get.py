@@ -231,9 +231,17 @@ def fetch_and_convert(args, dataset, schema_path):
 def file_cache_schema():
     tmp_dir = tempfile.mkdtemp()
     schema_path = os.path.join(tmp_dir, '360-giving-schema.json')
-    schema = requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-schema.json')
+    try: 
+        print("\nDownloading 360Giving Schema...\n")
+        schema = requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-schema.json')
+    except Exception as e:
+        print("Download failed for 360Giving Schema\n")
+        traceback.print_exc()
+
     with open(schema_path, 'w') as fp:
         fp.write(schema.text)
+
+    print("Schema Download successful.\n")
     return schema_path
 
 
