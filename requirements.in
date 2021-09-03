@@ -2,7 +2,6 @@ flattentool>=0.16.0
 jsonschema
 strict-rfc3339
 rfc3987
-rfc6266
 requests[socks]
 
 # Compatibility with CoVE

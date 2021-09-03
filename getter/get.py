@@ -8,7 +8,7 @@ from multiprocessing.dummy import Pool
 
 import flattentool
 import requests
-import rfc6266  # (content-disposition header parser)
+import email.headerregistry  # (content-disposition header parser)
 import strict_rfc3339
 from jsonschema import validate, ValidationError, FormatChecker
 
@@ -133,7 +133,10 @@ def fetch_and_convert(args, dataset, schema_path):
         if content_type and content_type in CONTENT_TYPE_MAP:
             file_type = CONTENT_TYPE_MAP[content_type]
         elif 'content-disposition' in r.headers:
-            file_type = rfc6266.parse_requests_response(r).filename_unsafe.split('.')[-1]
+            content_disposition = r.headers.get('content-disposition')
+            filename = dict(email.headerregistry.parser.parse_content_disposition_header(
+                content_disposition).params).get('filename')
+            file_type = filename.split('.')[-1]
         else:
             file_type = url.split('.')[-1]
         if file_type not in CONTENT_TYPE_MAP.values():
