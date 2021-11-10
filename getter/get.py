@@ -25,7 +25,7 @@ acceptable_licenses = [
 unacceptable_licenses = [
     '',
     # Not relicenseable as CC-BY
-    'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/1/', 
+    'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/1/',
     'https://creativecommons.org/licenses/by-nc/4.0/',
     'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 ]
@@ -88,153 +88,167 @@ def mkdirs(data_dir, exist_ok=False):
 
 
 def fetch_and_convert(args, dataset, schema_path):
-    r = None
+    try:
+        r = None
 
-    metadata = dataset.get('datagetter_metadata', {})
-    dataset['datagetter_metadata'] = metadata
+        metadata = dataset.get('datagetter_metadata', {})
+        dataset['datagetter_metadata'] = metadata
 
-    if not dataset['license'] in acceptable_licenses + unacceptable_licenses:
-        raise ValueError('Unrecognised license '+dataset['license'])
+        if not dataset['license'] in acceptable_licenses + unacceptable_licenses:
+            raise ValueError('Unrecognised license '+dataset['license'])
 
-    url = dataset['distribution'][0]['downloadURL']
+        url = dataset['distribution'][0]['downloadURL']
 
-    if args.download:
-        proxies = None
-        metadata['datetime_downloaded'] = strict_rfc3339.now_to_rfc3339_localoffset()
-        if args.socks5_proxy:
-            proxies = {
-                'http': args.socks5_proxy,
-                'https': args.socks5_proxy,
-            }
+        if args.download:
+            proxies = None
+            metadata['datetime_downloaded'] = strict_rfc3339.now_to_rfc3339_localoffset()
+            if args.socks5_proxy:
+                proxies = {
+                    'http': args.socks5_proxy,
+                    'https': args.socks5_proxy,
+                }
 
-        try:
-            print("Fetching %s" % url)
-            r = requests.get(
-                url,
-                headers={'User-Agent': 'datagetter (https://github.com/ThreeSixtyGiving/datagetter)'},
-                proxies=proxies
-            )
-            r.raise_for_status()
-
-            metadata['downloads'] = True
-        except Exception as e:
-            if isinstance(e, KeyboardInterrupt):
-                raise
-
-            print("\n\nDownload {} failed for dataset {}\n".format(url, dataset['identifier']))
-            traceback.print_exc()
-            metadata['downloads'] = False
-            metadata['error'] = str(e)
-
-            if not isinstance(e, requests.exceptions.HTTPError):
-                return
-
-        content_type = r.headers.get('content-type', '').split(';')[0].lower()
-        if content_type and content_type in CONTENT_TYPE_MAP:
-            file_type = CONTENT_TYPE_MAP[content_type]
-        elif 'content-disposition' in r.headers:
-            content_disposition = r.headers.get('content-disposition')
-            filename = dict(email.headerregistry.parser.parse_content_disposition_header(
-                content_disposition).params).get('filename')
-            file_type = filename.split('.')[-1]
-        else:
-            file_type = url.split('.')[-1]
-        if file_type not in CONTENT_TYPE_MAP.values():
-            print("\n\nUnrecognised file type {}\n".format(file_type))
-            return
-
-        # Check that the downloaded json file is valid json and not junk from the webserver
-        # e.g. a 500 error being output without the proper status code.
-        if file_type == "json":
             try:
-                json.loads(r.text)
-            except ValueError:
-                print("\n\nJSON file provided by webserver is invalid")
-                metadata['downloads'] = False
-                metadata['error'] = "Invalid JSON file provided by webserver"
-                return
+                print("Fetching %s" % url)
+                r = requests.get(
+                    url,
+                    headers={'User-Agent': 'datagetter (https://github.com/ThreeSixtyGiving/datagetter)'},
+                    proxies=proxies
+                )
+                r.raise_for_status()
 
-        metadata['file_type'] = file_type
+                metadata['downloads'] = True
+            except Exception as e:
+                if isinstance(e, KeyboardInterrupt):
+                    raise
 
-        file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
-        with open(file_name, 'wb') as fp:
-            fp.write(r.content)
-    else:
-        # --no-download arg
-
-        # We require the metadata to exist, it won't if the file failed to download correctly
-        if metadata['downloads'] == False:
-            print("Skipping %s as it was not marked as successfully downloaded" % dataset['identifier'])
-            return
-
-        file_type = metadata['file_type']
-        file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
-
-    json_file_name = '{}/json_all/{}.json'.format(args.data_dir, dataset['identifier'])
-
-    metadata['file_size'] = os.path.getsize(file_name)
-
-    if args.convert and (
-            args.convert_big_files or
-            metadata['file_size'] < 10 * 1024 * 1024
-            ):
-        if file_type == 'json':
-            os.link(file_name, json_file_name)
-            metadata['json'] = json_file_name
-        else:
-            try:
-                print("Running convert on %s to %s" % (file_name,
-                                                       json_file_name))
-                convert_spreadsheet(
-                    file_name,
-                    json_file_name,
-                    file_type,
-                    schema_path
-                    )
-            except KeyboardInterrupt:
-                raise
-            except Exception:
-                print("\n\nUnflattening failed for file {}\n".format(file_name))
+                print("\n\nDownload {} failed for dataset {}\n".format(url, dataset['identifier']))
                 traceback.print_exc()
-                metadata['json'] = None
-                metadata["valid"] = False
-                metadata["error"] = "Could not unflatten file"
-            else:
+                metadata['downloads'] = False
+                metadata['error'] = str(e)
+
+                if not isinstance(e, requests.exceptions.HTTPError):
+                    return
+
+            content_type = r.headers.get('content-type', '').split(';')[0].lower()
+            file_type = None
+
+            if content_type and content_type in CONTENT_TYPE_MAP:
+                file_type = CONTENT_TYPE_MAP[content_type]
+            elif 'content-disposition' in r.headers:
+                # When webserver serves file as an attachment rather than direct download
+                # We need to parse the header to get the filename and filetype.
+                # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
+                content_disposition = r.headers.get('content-disposition')
+                filename = dict(email.headerregistry.parser.parse_content_disposition_header(
+                    content_disposition).params).get('filename')
+                if filename:
+                    file_type = filename.split('.')[-1]
+
+            # Last resort to guessing the file type
+            if not file_type:
+                file_type = url.split('.')[-1]
+            if file_type not in CONTENT_TYPE_MAP.values():
+                print("\n\nUnrecognised file type {}\n".format(file_type))
+                return
+
+            # Check that the downloaded json file is valid json and not junk from the webserver
+            # e.g. a 500 error being output without the proper status code.
+            if file_type == "json":
+                try:
+                    json.loads(r.text)
+                except ValueError:
+                    print("\n\nJSON file provided by webserver is invalid")
+                    metadata['downloads'] = False
+                    metadata['error'] = "Invalid JSON file provided by webserver"
+                    return
+
+            metadata['file_type'] = file_type
+
+            file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
+            with open(file_name, 'wb') as fp:
+                fp.write(r.content)
+        else:
+            # --no-download arg
+
+            # We require the metadata to exist, it won't if the file failed to download correctly
+            if metadata['downloads'] == False:
+                print("Skipping %s as it was not marked as successfully downloaded" % dataset['identifier'])
+                return
+
+            file_type = metadata['file_type']
+            file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
+
+        json_file_name = '{}/json_all/{}.json'.format(args.data_dir, dataset['identifier'])
+
+        metadata['file_size'] = os.path.getsize(file_name)
+
+        if args.convert and (
+                args.convert_big_files or
+                metadata['file_size'] < 10 * 1024 * 1024
+                ):
+            if file_type == 'json':
+                os.link(file_name, json_file_name)
                 metadata['json'] = json_file_name
-
-    metadata['acceptable_license'] = dataset['license'] in acceptable_licenses
-
-    # We can only do anything with the JSON if it did successfully convert.
-    if metadata.get('json'):
-        format_checker = FormatChecker()
-        if args.validate:
-            try:
-                with open(json_file_name, 'r') as fp:
-                    validate(json.load(fp), package_schema, format_checker=format_checker)
-            except (ValidationError, ValueError):
-                metadata['valid'] = False
             else:
-                metadata['valid'] = True
+                try:
+                    print("Running convert on %s to %s" % (file_name,
+                                                        json_file_name))
+                    convert_spreadsheet(
+                        file_name,
+                        json_file_name,
+                        file_type,
+                        schema_path
+                        )
+                except KeyboardInterrupt:
+                    raise
+                except Exception:
+                    print("\n\nUnflattening failed for file {}\n".format(file_name))
+                    traceback.print_exc()
+                    metadata['json'] = None
+                    metadata["valid"] = False
+                    metadata["error"] = "Could not unflatten file"
+                else:
+                    metadata['json'] = json_file_name
 
-        if metadata['valid']:
-            os.link(json_file_name,
-                    '{}/json_valid/{}.json'.format(args.data_dir, dataset['identifier']))
-            data_valid.append(dataset)
+        metadata['acceptable_license'] = dataset['license'] in acceptable_licenses
+
+        # We can only do anything with the JSON if it did successfully convert.
+        if metadata.get('json'):
+            format_checker = FormatChecker()
+            if args.validate:
+                try:
+                    with open(json_file_name, 'r') as fp:
+                        validate(json.load(fp), package_schema, format_checker=format_checker)
+                except (ValidationError, ValueError):
+                    metadata['valid'] = False
+                else:
+                    metadata['valid'] = True
+
+            if metadata['valid']:
+                os.link(json_file_name,
+                        '{}/json_valid/{}.json'.format(args.data_dir, dataset['identifier']))
+                data_valid.append(dataset)
+                if metadata['acceptable_license']:
+                    os.link(json_file_name,
+                            '{}/json_acceptable_license_valid/{}.json'.format(args.data_dir, dataset['identifier']))
+                    data_acceptable_license_valid.append(dataset)
+
             if metadata['acceptable_license']:
                 os.link(json_file_name,
-                        '{}/json_acceptable_license_valid/{}.json'.format(args.data_dir, dataset['identifier']))
-                data_acceptable_license_valid.append(dataset)
+                        '{}/json_acceptable_license/{}.json'.format(args.data_dir, dataset['identifier']))
+                data_acceptable_license.append(dataset)
 
-        if metadata['acceptable_license']:
-            os.link(json_file_name,
-                    '{}/json_acceptable_license/{}.json'.format(args.data_dir, dataset['identifier']))
-            data_acceptable_license.append(dataset)
+    # Exception catcher if /anything/ went wrong in fetch_and_convert function we don't want to crash out
+    except Exception as e:
+        print(f"Unknown issue with {url} {e}")
+
 
 
 def file_cache_schema():
     tmp_dir = tempfile.mkdtemp()
     schema_path = os.path.join(tmp_dir, '360-giving-schema.json')
-    try: 
+    try:
         print("\nDownloading 360Giving Schema...\n")
         schema = requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-schema.json')
     except Exception as e:
