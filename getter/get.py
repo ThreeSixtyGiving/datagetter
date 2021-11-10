@@ -4,7 +4,7 @@ import os
 import shutil
 import tempfile
 import traceback
-from multiprocessing.dummy import Pool
+from multiprocessing import Pool
 
 import flattentool
 import requests
