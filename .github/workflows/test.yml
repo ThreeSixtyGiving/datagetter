@@ -18,3 +18,13 @@ jobs:
 
     - run: pip install .
     - run: datagetter.py --limit-downloads 8
+    - run: ls ./data/data_acceptable_license.json
+    - run: ls ./data/data_acceptable_license_valid.json
+    - run: ls ./data/data_all.json
+    - run: ls ./data/json_acceptable_license/
+    - run: ls ./data/json_acceptable_license_valid/
+    - run: ls ./data/json_all/
+    - run: ls ./data/json_valid/
+    - run: ls ./data/original/
+    - run: grep -A 8 "datagetter_metadata" ./data/data_all.json
+    - run: grep "datagetter_metadata" ./data/data_all.json | wc -l | grep "8"
