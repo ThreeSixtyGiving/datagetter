@@ -241,7 +241,12 @@ def fetch_and_convert(args, dataset, schema_path):
 
     # Exception catcher if /anything/ went wrong in fetch_and_convert function we don't want to crash out
     except Exception as e:
+        metadata['valid'] = False
+        metadata['downloads'] = False
+        metadata['json'] = None
         print(f"Unknown issue with {url} {e}")
+
+    return dataset
 
 
 
@@ -286,13 +291,20 @@ def get(args):
     schema_path = file_cache_schema()
 
     with Pool(args.threads) as process_pool:
-        process_pool.starmap(fetch_and_convert, zip(itertools.repeat(args),
-                                                    data_all, itertools.repeat(schema_path)))
+        new_data_all = []
+        # We iterate through data_all and return the object back with
+        # some datagetter_metadata added
+        data_metadata = process_pool.starmap(
+            fetch_and_convert,
+            zip(itertools.repeat(args), data_all, itertools.repeat(schema_path))
+        )
+
+        new_data_all += data_metadata
 
     # Output data.json after every dataset, to help with debugging if we fail
     # part way through
     with open('%s/data_all.json' % args.data_dir, 'w') as fp:
-        json.dump(data_all, fp, indent=4)
+        json.dump(new_data_all, fp, indent=4)
     with open('%s/data_valid.json' % args.data_dir, 'w') as fp:
         json.dump(data_valid, fp, indent=4)
     with open('%s/data_acceptable_license.json' % args.data_dir, 'w') as fp:
