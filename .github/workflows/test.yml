@@ -24,7 +24,7 @@ jobs:
     - run: ls ./data/json_acceptable_license/
     - run: ls ./data/json_acceptable_license_valid/
     - run: ls ./data/json_all/
-    - run: ls ./data/json_valid/
+    - run: ls ./data/CATSjson_valid/
     - run: ls ./data/original/
     - run: grep -A 8 "datagetter_metadata" ./data/data_all.json
     - run: grep "datagetter_metadata" ./data/data_all.json | wc -l | grep "8"
