@@ -128,7 +128,7 @@ def fetch_and_convert(args, dataset, schema_path):
                 metadata['error'] = str(e)
 
                 if not isinstance(e, requests.exceptions.HTTPError):
-                    return
+                    return dataset
 
             content_type = r.headers.get('content-type', '').split(';')[0].lower()
             file_type = None
@@ -150,7 +150,7 @@ def fetch_and_convert(args, dataset, schema_path):
                 file_type = url.split('.')[-1]
             if file_type not in CONTENT_TYPE_MAP.values():
                 print("\n\nUnrecognised file type {}\n".format(file_type))
-                return
+                return dataset
 
             # Check that the downloaded json file is valid json and not junk from the webserver
             # e.g. a 500 error being output without the proper status code.
@@ -161,7 +161,7 @@ def fetch_and_convert(args, dataset, schema_path):
                     print("\n\nJSON file provided by webserver is invalid")
                     metadata['downloads'] = False
                     metadata['error'] = "Invalid JSON file provided by webserver"
-                    return
+                    return dataset
 
             metadata['file_type'] = file_type
 
@@ -174,7 +174,7 @@ def fetch_and_convert(args, dataset, schema_path):
             # We require the metadata to exist, it won't if the file failed to download correctly
             if metadata['downloads'] == False:
                 print("Skipping %s as it was not marked as successfully downloaded" % dataset['identifier'])
-                return
+                return dataset
 
             file_type = metadata['file_type']
             file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
@@ -299,7 +299,10 @@ def get(args):
             zip(itertools.repeat(args), data_all, itertools.repeat(schema_path))
         )
 
-        new_data_all += data_metadata
+        # Extra guard against "None" getting added to this list from an exception or
+        # rogue return
+        if data_metadata:
+            new_data_all += data_metadata
 
     # Output data.json after every dataset, to help with debugging if we fail
     # part way through
