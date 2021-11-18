@@ -5,7 +5,7 @@ Scripts to download the data from the http://data.threesixtygiving.org registry
 
 Install dependencies:
 
-The datagetter is tested to run on python3.6
+The datagetter is tested to run on python3.8
 
 ```
 # Create a new python3 virtual environment
@@ -29,3 +29,7 @@ Run:
 # See datagetter.py --help for options
 $ datagetter.py
 ```
+
+## Developers
+
+If you are updating `requirements.txt` please make sure you use version 3.8 of Python.
