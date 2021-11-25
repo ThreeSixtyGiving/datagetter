@@ -8,4 +8,3 @@ requests[socks]
 attrs>=20.3.0
 importlib-metadata==1.7.0
 openpyxl==2.6.4
-zipp==1.2.0
