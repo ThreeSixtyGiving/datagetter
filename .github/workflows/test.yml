@@ -19,7 +19,10 @@ jobs:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/requirements_dev.txt') }}
 
+    # Test if the datagetter's requirements clash with the datastore requirements
+    - run: pip install -r https://raw.githubusercontent.com/ThreeSixtyGiving/datastore/master/requirements.txt
     - run: pip install .
+
     - run: datagetter.py --limit-downloads 8
     - run: ls ./data/data_acceptable_license.json
     - run: ls ./data/data_acceptable_license_valid.json
