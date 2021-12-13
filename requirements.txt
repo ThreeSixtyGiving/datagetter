@@ -38,7 +38,7 @@ jsonref==0.2
     # via flattentool
 jsonschema==3.2.0
     # via -r requirements.in
-lxml==4.6.4
+lxml==4.6.5
     # via flattentool
 odfpy==1.4.1
     # via flattentool
