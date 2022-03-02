@@ -221,7 +221,11 @@ def fetch_and_convert(args, dataset, schema_path):
                     with open(json_file_name, 'r') as fp:
                         validate(json.load(fp), package_schema, format_checker=format_checker)
                 except (ValidationError, ValueError):
+                    print("File %s does not conform to 360Giving standard" % json_file_name)
+                    # Non-standard data breaks tools so get rid of it
+                    metadata['json'] = None
                     metadata['valid'] = False
+                    metadata['error'] = "File does not conform to the 360Giving standard"
                 else:
                     metadata['valid'] = True
 
