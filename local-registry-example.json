@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Test ABC publisher",
+    "description": "",
+    "identifier": "awefw001p00000zgyHZAAY",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "license_name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "issued": "2018-06-21",
+    "modified": "2022-04-27T08:05:23.000+0000",
+    "publisher": {
+      "name": "ABC Trust",
+      "website": "http://example.com/",
+      "logo": "https://example.com/Logo_RGB.jpg",
+      "prefix": "360G-TEST",
+      "last_published": "2022-09-05",
+      "org_id": "GB-CHC-000000"
+    },
+    "distribution": [
+      {
+        "downloadURL": "test data url here",
+        "accessURL": "",
+        "title": "Test valid grants"
+      }
+    ]
+  }
+]
