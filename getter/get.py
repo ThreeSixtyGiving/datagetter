@@ -273,9 +273,14 @@ def file_cache_schema():
 
 def get(args):
 
-    if args.local_registry or not args.download:
+    if not args.download:
         mkdirs(args.data_dir, True)
         data_all = json.load(open('%s/data_all.json' % args.data_dir))
+
+    elif args.local_registry:
+        mkdirs(args.data_dir, False)
+        with open(args.local_registry) as fp:
+            data_all = json.load(fp)
 
     elif args.download:
         mkdirs(args.data_dir, False)

@@ -9,7 +9,7 @@ def main():
     parser.add_argument('--no-download', dest='download', action='store_false',
             help="Don't download any files only convert existing data")
 
-    parser.add_argument('--local-registry', dest='local_registry', action='store_true',
+    parser.add_argument('--local-registry', dest='local_registry', action='store',
             help="Use a local registry file rather than data.threesixtygiving.org",
             default=False)
 
