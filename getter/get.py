@@ -37,14 +37,14 @@ CONTENT_TYPE_MAP = {
     "application/vnd.oasis.opendocument.spreadsheet": "ods"
 }
 
-package_schema = json.loads(requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-package-schema.json').text)
 
 data_valid = []
 data_acceptable_license = []
 data_acceptable_license_valid = []
 
 
-def convert_spreadsheet(input_path, converted_path, file_type, schema_path):
+def convert_spreadsheet(input_path, converted_path, file_type, schema_path,
+                        schema_branch):
     encoding = 'utf-8-sig'
     if file_type == 'csv':
         tmp_dir = tempfile.mkdtemp()
@@ -73,7 +73,7 @@ def convert_spreadsheet(input_path, converted_path, file_type, schema_path):
         schema=schema_path,
         convert_titles=True,
         encoding=encoding,
-        metatab_schema='https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-package-schema.json',
+        metatab_schema=f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{schema_branch}/schema/360-giving-package-schema.json",
         metatab_name='Meta',
         metatab_vertical_orientation=True,
     )
@@ -87,7 +87,7 @@ def mkdirs(data_dir, exist_ok=False):
         os.makedirs("%s/%s" % (data_dir, dir_name), exist_ok=exist_ok)
 
 
-def fetch_and_convert(args, dataset, schema_path):
+def fetch_and_convert(args, dataset, schema_path, package_schema):
     try:
         r = None
 
@@ -198,7 +198,8 @@ def fetch_and_convert(args, dataset, schema_path):
                         file_name,
                         json_file_name,
                         file_type,
-                        schema_path
+                        schema_path,
+                        args.schema_branch
                         )
                 except KeyboardInterrupt:
                     raise
@@ -253,19 +254,15 @@ def fetch_and_convert(args, dataset, schema_path):
     return dataset
 
 
-
-def file_cache_schema():
+def file_cache_schema(schema_branch):
     tmp_dir = tempfile.mkdtemp()
     schema_path = os.path.join(tmp_dir, '360-giving-schema.json')
-    try:
-        print("\nDownloading 360Giving Schema...\n")
-        schema = requests.get('https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/360-giving-schema.json')
-    except Exception as e:
-        print("Download failed for 360Giving Schema\n")
-        traceback.print_exc()
+    print("\nDownloading 360Giving Schema...\n")
+    r = requests.get(f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{schema_branch}/schema/360-giving-schema.json")
+    r.raise_for_status()
 
     with open(schema_path, 'w') as fp:
-        fp.write(schema.text)
+        fp.write(r.text)
 
     print("Schema Download successful.\n")
     return schema_path
@@ -297,7 +294,8 @@ def get(args):
     if args.limit_downloads:
         data_all = data_all[:args.limit_downloads]
 
-    schema_path = file_cache_schema()
+    schema_path = file_cache_schema(args.schema_branch)
+    package_schema = json.loads(requests.get(f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-package-schema.json").text)
 
     with Pool(args.threads) as process_pool:
         new_data_all = []
@@ -305,7 +303,9 @@ def get(args):
         # some datagetter_metadata added
         data_metadata = process_pool.starmap(
             fetch_and_convert,
-            zip(itertools.repeat(args), data_all, itertools.repeat(schema_path))
+            zip(itertools.repeat(args), data_all,
+                itertools.repeat(schema_path),
+                itertools.repeat(package_schema))
         )
 
         # Extra guard against "None" getting added to this list from an exception or

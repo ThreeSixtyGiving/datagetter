@@ -29,7 +29,10 @@ def main():
                         help="Limit the number of file downloads",
                         default=None)
 
-
+    parser.add_argument('--schema-branch', dest='schema_branch', action='store',
+                        type=str,
+                        help="Specify a git branch of the 360Giving schema",
+                        default='master')
 
     args = parser.parse_args()
 
