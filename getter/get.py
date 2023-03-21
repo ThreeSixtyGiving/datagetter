@@ -11,6 +11,7 @@ import requests
 import email.headerregistry  # (content-disposition header parser)
 import strict_rfc3339
 from jsonschema import validate, ValidationError, FormatChecker
+import getter.cache as cache
 
 acceptable_licenses = [
     'http://www.opendefinition.org/licenses/odc-pddl',
@@ -173,8 +174,8 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
 
             metadata['file_type'] = file_type
 
-            file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
-            with open(file_name, 'wb') as fp:
+            original_file_path = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
+            with open(original_file_path, 'wb') as fp:
                 fp.write(r.content)
         else:
             # --no-download arg
@@ -185,34 +186,57 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                 return dataset
 
             file_type = metadata['file_type']
-            file_name = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
+            original_file_path = args.data_dir+'/original/'+dataset['identifier']+'.'+file_type
 
         json_file_name = '{}/json_all/{}.json'.format(args.data_dir, dataset['identifier'])
 
-        metadata['file_size'] = os.path.getsize(file_name)
+        metadata['file_size'] = os.path.getsize(original_file_path)
 
         if args.convert and (
                 args.convert_big_files or
                 metadata['file_size'] < 10 * 1024 * 1024
                 ):
             if file_type == 'json':
-                os.link(file_name, json_file_name)
+                os.link(original_file_path, json_file_name)
                 metadata['json'] = json_file_name
             else:
                 try:
-                    print("Running convert on %s to %s" % (file_name,
-                                                        json_file_name))
-                    convert_spreadsheet(
-                        file_name,
-                        json_file_name,
-                        file_type,
-                        schema_path,
-                        args.schema_branch
-                        )
+                    print("Running convert on %s to %s" % (original_file_path,
+                                                           json_file_name))
+
+                    # Hash the file
+                    file_hash_str = cache.hash_file(original_file_path)
+
+                    # Check if we have already converted the file
+                    cached_file_path = cache.get_file(file_hash_str)
+
+                    # We have converted the file before so copy from the CACHE_DIR
+                    if cached_file_path:
+                        try:
+                            shutil.copy(cached_file_path, json_file_name)
+                            print("Cache hit")
+                        except FileNotFoundError:
+                            cached_file_path = False
+
+                    if not cached_file_path:
+                        convert_spreadsheet(
+                            original_file_path,
+                            json_file_name,
+                            file_type,
+                            schema_path,
+                            args.schema_branch
+                            )
+
+                        cache.update_cache(
+                                json_file_name,
+                                file_hash_str,
+                                dataset['identifier'],
+                                file_type)
+
                 except KeyboardInterrupt:
                     raise
                 except Exception:
-                    print("\n\nUnflattening failed for file {}\n".format(file_name))
+                    print("\n\nUnflattening failed for file {}\n".format(original_file_path))
                     traceback.print_exc()
                     metadata['json'] = None
                     metadata["valid"] = False
@@ -277,6 +301,9 @@ def file_cache_schema(schema_branch):
 
 
 def get(args):
+
+    cache.setup_database()
+    cache.setup_cache_dir()
 
     if not args.download:
         mkdirs(args.data_dir, True)
