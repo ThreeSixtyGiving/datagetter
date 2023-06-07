@@ -101,6 +101,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
 
     if args.publisher_prefixes:
         if dataset["publisher"]["prefix"] not in args.publisher_prefixes:
+            dataset["datagetter_metadata"] = {"downloads": False}
             return dataset
 
     try:
