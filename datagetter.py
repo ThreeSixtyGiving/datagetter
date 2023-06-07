@@ -34,6 +34,9 @@ def main():
                         help="Specify a git branch of the 360Giving schema",
                         default='master')
 
+    parser.add_argument("--publishers", nargs="+", dest="publisher_prefixes", action="store",
+                        type=str, help="Only download for selected publishers")
+
     args = parser.parse_args()
 
     get(args)

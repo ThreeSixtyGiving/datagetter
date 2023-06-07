@@ -97,6 +97,12 @@ def mkdirs(data_dir, exist_ok=False):
 
 
 def fetch_and_convert(args, dataset, schema_path, package_schema):
+    # must always return dataset
+
+    if args.publisher_prefixes:
+        if dataset["publisher"]["prefix"] not in args.publisher_prefixes:
+            return dataset
+
     try:
         r = None
 
@@ -325,9 +331,12 @@ def get(args):
         print("No source for data")
         exit(1)
 
-
     if args.limit_downloads:
         data_all = data_all[:args.limit_downloads]
+        if args.publisher_prefixes:
+            print("Warning: Limit applied and publisher prefixes selected, can have one or the other not both.")
+            exit(1)
+
 
     schema_path = file_cache_schema(args.schema_branch)
     package_schema = json.loads(requests.get(f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-package-schema.json").text)
