@@ -211,18 +211,22 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                     print("Running convert on %s to %s" % (original_file_path,
                                                            json_file_name))
 
-                    # Hash the file
-                    file_hash_str = cache.hash_file(original_file_path)
+                    try:
+                        # Hash the file
+                        file_hash_str = cache.hash_file(original_file_path)
+                        # Check if we have already converted the file
+                        cached_file_path = cache.get_file(file_hash_str)
 
-                    # Check if we have already converted the file
-                    cached_file_path = cache.get_file(file_hash_str)
-
-                    # We have converted the file before so copy from the CACHE_DIR
-                    if cached_file_path:
-                        try:
-                            shutil.copy(cached_file_path, json_file_name)
-                            print("Cache hit")
-                        except FileNotFoundError:
+                        # We have converted the file before so copy from the CACHE_DIR
+                        if cached_file_path:
+                            try:
+                                shutil.copy(cached_file_path, json_file_name)
+                                print("Cache hit")
+                            except (FileNotFoundError, PermissionError):
+                                cached_file_path = False
+                    except cache.DatagetterCacheError as e:
+                            print(e)
+                            print("Continuing without cache")
                             cached_file_path = False
 
                     if not cached_file_path:
@@ -233,12 +237,15 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                             schema_path,
                             args.schema_branch
                             )
-
-                        cache.update_cache(
-                                json_file_name,
-                                file_hash_str,
-                                dataset['identifier'],
-                                file_type)
+                        try:
+                            cache.update_cache(
+                                    json_file_name,
+                                    file_hash_str,
+                                    dataset['identifier'],
+                                    file_type)
+                        except cache.DatagetterCacheError as e:
+                            print(e)
+                            print("Continuing without cache")
 
                 except KeyboardInterrupt:
                     raise
@@ -309,8 +316,12 @@ def file_cache_schema(schema_branch):
 
 def get(args):
 
-    cache.setup_database()
-    cache.setup_cache_dir()
+    try:
+        cache.setup_database()
+        cache.setup_cache_dir()
+    except cache.DatagetterCacheError as e:
+        print(e)
+        print("Continuing without cache")
 
     if not args.download:
         mkdirs(args.data_dir, True)
