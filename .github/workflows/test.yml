@@ -19,8 +19,11 @@ jobs:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/requirements_dev.txt') }}
 
+    # Install
     - run: pip install .
+    # Run tool
     - run: datagetter.py --limit-downloads 8
+    # Check output is created in expected structure
     - run: ls ./data/data_acceptable_license.json
     - run: ls ./data/data_acceptable_license_valid.json
     - run: ls ./data/data_all.json
@@ -29,5 +32,12 @@ jobs:
     - run: ls ./data/json_all/
     - run: ls ./data/json_valid/
     - run: ls ./data/original/
+    # Check the metadata blocks look OK
     - run: grep -A 8 "datagetter_metadata" ./data/data_all.json
     - run: grep "datagetter_metadata" ./data/data_all.json | wc -l | grep "8"
+    # Basic test for cached data
+    - run: rm -rf ./data/
+    - run: datagetter.py --limit-downloads 8
+    - run: ls ./cache_dir
+    - run: ls cache_datagetter.db
+    - run: ls ./data
