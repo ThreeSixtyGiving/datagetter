@@ -30,8 +30,6 @@ idna==3.3
     # via requests
 ijson==3.1.4
     # via flattentool
-importlib-metadata==1.7.0
-    # via -r requirements.in
 jdcal==1.4.1
     # via openpyxl
 jsonref==0.2
@@ -82,8 +80,6 @@ zc-zlibstorage==1.2.0
     # via flattentool
 zconfig==3.6.0
     # via zodb
-zipp==3.6.0
-    # via importlib-metadata
 zodb==5.6.0
     # via
     #   flattentool
