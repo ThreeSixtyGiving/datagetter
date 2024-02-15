@@ -32,7 +32,7 @@ def main():
     parser.add_argument('--schema-branch', dest='schema_branch', action='store',
                         type=str,
                         help="Specify a git branch of the 360Giving schema",
-                        default='master')
+                        default='main')
 
     parser.add_argument("--publishers", nargs="+", dest="publisher_prefixes", action="store",
                         type=str, help="Only download for selected publishers")
