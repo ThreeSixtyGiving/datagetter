@@ -22,7 +22,7 @@ setup(
     scripts=['datagetter.py'],
     url='https://github.com/ThreeSixtyGiving/datagetter',
     license='LICENSE',
-    description='Fetches the data from data.threesixtygiving.org',
+    description='Fetches the data from registry.threesixtygiving.org',
     install_requires=install_requires,
     packages=['getter'],
     packages_dir={'getter': 'getter'}
