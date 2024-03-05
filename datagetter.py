@@ -10,7 +10,7 @@ def main():
             help="Don't download any files only convert existing data")
 
     parser.add_argument('--local-registry', dest='local_registry', action='store',
-            help="Use a local registry file rather than data.threesixtygiving.org",
+            help="Use a local registry file rather than registry.threesixtygiving.org",
             default=False)
 
     parser.add_argument('--no-convert', dest='convert', action='store_false')

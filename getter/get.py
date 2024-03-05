@@ -334,7 +334,7 @@ def get(args):
 
     elif args.download:
         mkdirs(args.data_dir, False)
-        r = requests.get('https://data.threesixtygiving.org/data.json')
+        r = requests.get('https://registry.threesixtygiving.org/data.json')
         with open('%s/data_original.json' % args.data_dir, 'w') as fp:
             fp.write(r.text)
         data_all = r.json()
