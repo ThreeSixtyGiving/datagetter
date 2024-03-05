@@ -1,5 +1,5 @@
 # 360Giving datagetter
-Scripts to download the data from the http://data.threesixtygiving.org registry
+Scripts to download the data from the http://registry.threesixtygiving.org file registry
 
 ## Install
 
@@ -42,7 +42,7 @@ optional arguments:
   -h, --help            show this help message and exit
   --no-download         Don't download any files only convert existing data
   --local-registry LOCAL_REGISTRY
-                        Use a local registry file rather than data.threesixtygiving.org
+                        Use a local registry file rather than registry.threesixtygiving.org
   --no-convert
   --no-convert-big-files
   --no-validate
