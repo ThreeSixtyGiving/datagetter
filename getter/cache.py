@@ -1,6 +1,6 @@
 import os
 import shutil
-import sqlite3
+import apsw
 import hashlib
 
 DATABASE_NAME = "cache_datagetter.db"
@@ -12,7 +12,7 @@ class DatagetterCacheError(Exception):
 
 def setup_database():
     try:
-        con = sqlite3.connect(DATABASE_NAME)
+        con = apsw.Connection(DATABASE_NAME)
         cur = con.cursor()
         cur.execute(
             """CREATE TABLE IF NOT EXISTS cache
@@ -20,7 +20,6 @@ def setup_database():
             hash TEXT NOT NULL UNIQUE,
             json_file TEXT NOT NULL UNIQUE);"""
         )
-        con.commit()
         con.close()
     except Exception as e:
         raise DatagetterCacheError(e)
@@ -52,7 +51,7 @@ def hash_file(original_file_path):
 
 def get_file(file_hash_str):
     try:
-        con = sqlite3.connect(DATABASE_NAME)
+        con = apsw.Connection(DATABASE_NAME)
         cur = con.cursor()
         cur.execute("SELECT json_file FROM cache WHERE hash = ?", (file_hash_str,))
         row = cur.fetchone()
@@ -76,7 +75,7 @@ def update_cache(json_file_name, file_hash_str, file_identifier, file_type):
     # Todo clean up cache functionality for orphaned files or to reset the cache
 
     try:
-        con = sqlite3.connect(DATABASE_NAME)
+        con = apsw.Connection(DATABASE_NAME)
         cur = con.cursor()
 
         cur.execute(
@@ -95,8 +94,6 @@ def update_cache(json_file_name, file_hash_str, file_identifier, file_type):
                 file_identifier + "." + file_type,
             ),
         )
-
-        con.commit()
 
         shutil.copy(json_file_name, CACHE_DIR)
     except Exception as e:

@@ -3,6 +3,7 @@ jsonschema
 strict-rfc3339
 rfc3987
 requests[socks]
+apsw>=3.35,<4
 
 # Compatibility with CoVE
 attrs>=20.3.0
