@@ -4,6 +4,8 @@
 #
 #    pip-compile
 #
+apsw==3.45.3.0
+    # via -r requirements.in
 attrs==21.2.0
     # via
     #   -r requirements.in
