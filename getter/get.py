@@ -77,6 +77,7 @@ def convert_spreadsheet(input_path, converted_path, file_type, schema_path,
         metatab_schema=f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{schema_branch}/schema/360-giving-package-schema.json",
         metatab_name='Meta',
         metatab_vertical_orientation=True,
+        default_configuration="hashcomments",
     )
 
 
