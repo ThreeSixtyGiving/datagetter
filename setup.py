@@ -4,7 +4,7 @@ from distutils.core import setup
 
 install_requires = []
 
-with open('./requirements.txt') as requirements_txt:
+with open('./requirements.in') as requirements_txt:
     requirements = requirements_txt.read().strip().splitlines()
     for requirement in requirements:
         if requirement.startswith('#'):
