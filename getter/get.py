@@ -60,7 +60,7 @@ session.mount("http://", HTTPAdapter(max_retries=retries))
 
 
 def convert_spreadsheet(
-    input_path, converted_path, file_type, schema_path, schema_branch
+    input_path, converted_path, file_type, schema_path, schema_package_path
 ):
     encoding = "utf-8-sig"
     if file_type == "csv":
@@ -90,7 +90,7 @@ def convert_spreadsheet(
         schema=schema_path,
         convert_titles=True,
         encoding=encoding,
-        metatab_schema=f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{schema_branch}/schema/360-giving-package-schema.json",
+        metatab_schema=schema_package_path,
         metatab_name="Meta",
         metatab_vertical_orientation=True,
         default_configuration="hashcomments",
@@ -362,28 +362,27 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
     return dataset
 
 
-def file_cache_schema(schema_branch):
-    tmp_dir = tempfile.mkdtemp()
-    schema_path = os.path.join(tmp_dir, "360-giving-schema.json")
-    print("\nDownloading 360Giving Schema...\n")
-    res = session.get(
-        f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{schema_branch}/schema/360-giving-schema.json"
-    )
+def file_cache(url):
+    res = session.get(url)
     res.raise_for_status()
 
-    with open(schema_path, "w") as fp:
+    tmp_dir = tempfile.mkdtemp()
+    out_file = os.path.join(tmp_dir, os.path.basename(url))
+
+    print(f"Caching {url} to {out_file}")
+
+    with open(out_file, "w") as fp:
         fp.write(res.text)
 
-    print("Schema Download successful.\n")
-    return schema_path
+    return out_file
 
 
 def get(args):
-    schema_path = file_cache_schema(args.schema_branch)
-    package_schema = json.loads(
-        session.get(
-            f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-package-schema.json"
-        ).text
+    schema_path = file_cache(
+        f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-schema.json"
+    )
+    schema_package_path = file_cache(
+        f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-package-schema.json"
     )
 
     if args.test_file:
@@ -393,15 +392,18 @@ def get(args):
             "tmp_test_file.json",
             "xlsx",
             schema_path,
-            args.schema_branch,
+            schema_package_path,
         )
         with open("tmp_test_file.json", "r") as fp:
-            try:
-                validate(json.load(fp), package_schema, format_checker=format_checker)
-            except ValidationError as e:
-                print(e)
-                print("Validation error")
-        return
+            with open(schema_package_path) as pkg_fp:
+                try:
+                    validate(
+                        json.load(fp), json.load(pkg_fp), format_checker=format_checker
+                    )
+                except ValidationError as e:
+                    print(e)
+                    print("Validation error")
+            return
 
     try:
         cache.setup_database()
@@ -463,7 +465,7 @@ def get(args):
                 itertools.repeat(args),
                 data_all,
                 itertools.repeat(schema_path),
-                itertools.repeat(package_schema),
+                itertools.repeat(schema_package_path),
             ),
         )
 
