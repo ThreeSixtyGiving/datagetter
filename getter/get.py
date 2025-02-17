@@ -117,8 +117,8 @@ def mkdirs(data_dir, exist_ok=False):
             exit
 
 
-def fetch_and_convert(args, dataset, schema_path, package_schema):
-    # must always return dataset
+def fetch_and_convert(args, dataset, schema_path, schema_package_path):
+    """Fetches and converts 360 Giving datasets. Must return a dataset"""
 
     if args.publisher_prefixes:
         if dataset["publisher"]["prefix"] not in args.publisher_prefixes:
@@ -190,7 +190,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
             if not file_type:
                 file_type = url.split(".")[-1]
             if file_type not in CONTENT_TYPE_MAP.values():
-                print("\n\nUnrecognised file type {}\n".format(file_type))
+                print(f"Unrecognised file type {file_type}")
                 return dataset
 
             # Check that the downloaded json file is valid json and not junk from the webserver
@@ -199,7 +199,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                 try:
                     json.loads(res.text)
                 except ValueError:
-                    print("\n\nJSON file provided by webserver is invalid")
+                    print("Warning: JSON file provided by webserver is invalid")
                     metadata["downloads"] = False
                     metadata["error"] = "Invalid JSON file provided by webserver"
                     return dataset
@@ -217,8 +217,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
             # We require the metadata to exist, it won't if the file failed to download correctly
             if metadata["downloads"] == False:
                 print(
-                    "Skipping %s as it was not marked as successfully downloaded"
-                    % dataset["identifier"]
+                    f"Skipping {dataset['identifier']} as it was not marked as successfully downloaded"
                 )
                 return dataset
 
@@ -242,8 +241,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
             else:
                 try:
                     print(
-                        "Running convert on %s to %s"
-                        % (original_file_path, json_file_name)
+                        f"Running convert on {original_file_path} to {json_file_name}"
                     )
 
                     try:
@@ -260,8 +258,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                             except (FileNotFoundError, PermissionError):
                                 cached_file_path = False
                     except cache.DatagetterCacheError as e:
-                        print(e)
-                        print("Continuing without cache")
+                        print(f"Continuing without cache (hash/get): {e}")
                         cached_file_path = False
 
                     if not cached_file_path:
@@ -270,49 +267,46 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                             json_file_name,
                             file_type,
                             schema_path,
-                            args.schema_branch,
+                            schema_package_path,
                         )
                         try:
                             cache.update_cache(
-                                json_file_name,
+                                str(json_file_name),
                                 file_hash_str,
                                 dataset["identifier"],
                                 file_type,
                             )
                         except cache.DatagetterCacheError as e:
-                            print(e)
-                            print("Continuing without cache")
+                            print(f"Continuing without cache (update error): {e}")
 
                 except KeyboardInterrupt:
                     raise
                 except Exception:
-                    print(
-                        "\n\nUnflattening failed for file {}\n".format(
-                            original_file_path
-                        )
-                    )
+                    print(f"Warning: Unflattening failed for file {original_file_path}")
                     traceback.print_exc()
                     metadata["json"] = None
                     metadata["valid"] = False
                     metadata["error"] = "Could not unflatten file"
                 else:
-                    metadata["json"] = json_file_name
+                    metadata["json"] = str(json_file_name)
 
         metadata["acceptable_license"] = dataset["license"] in acceptable_licenses
 
-        # We can only do anything with the JSON if it did successfully convert.
+        # We can only do continue with the JSON if it did successfully convert.
         if metadata.get("json"):
             format_checker = FormatChecker()
             if args.validate:
                 try:
                     with open(json_file_name, "r") as fp:
-                        validate(
-                            json.load(fp), package_schema, format_checker=format_checker
-                        )
+                        with open(schema_package_path) as pkg_fp:
+                            validate(
+                                json.load(fp),
+                                json.load(pkg_fp),
+                                format_checker=format_checker,
+                            )
                 except (ValidationError, ValueError) as e:
                     print(
-                        "File %s does not conform to 360Giving standard"
-                        % json_file_name
+                        f"Warning: File {json_file_name} does not conform to 360Giving standard"
                     )
                     # Non-standard data breaks tools so get rid of it
                     #                    metadata['json'] = None
@@ -352,7 +346,8 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                 )
                 data_acceptable_license.append(dataset)
 
-    # Exception catcher if /anything/ went wrong in fetch_and_convert function we don't want to crash out
+    # Exception catcher if /anything/ went wrong in fetch_and_convert function
+    # we don't want to crash out
     except Exception as e:
         metadata["valid"] = False
         metadata["downloads"] = False
