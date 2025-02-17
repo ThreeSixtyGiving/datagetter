@@ -206,9 +206,10 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
 
             metadata["file_type"] = file_type
 
-            original_file_path = (
-                args.data_dir + "/original/" + dataset["identifier"] + "." + file_type
+            original_file_path = os.path.join(
+                args.data_dir, "original", f"{dataset['identifier']}.{file_type}"
             )
+
             with open(original_file_path, "wb") as fp:
                 fp.write(res.content)
         else:
@@ -222,12 +223,12 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
                 return dataset
 
             file_type = metadata["file_type"]
-            original_file_path = (
-                args.data_dir + "/original/" + dataset["identifier"] + "." + file_type
+            original_file_path = os.path.join(
+                args.data_dir, "original", f"{dataset['identifier']}.{file_type}"
             )
 
-        json_file_name = "{}/json_all/{}.json".format(
-            args.data_dir, dataset["identifier"]
+        json_file_name = os.path.join(
+            args.data_dir, "json_all", f"{dataset['identifier']}.json"
         )
 
         metadata["file_size"] = os.path.getsize(original_file_path)
@@ -271,7 +272,7 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
                         )
                         try:
                             cache.update_cache(
-                                str(json_file_name),
+                                json_file_name,
                                 file_hash_str,
                                 dataset["identifier"],
                                 file_type,
@@ -288,7 +289,7 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
                     metadata["valid"] = False
                     metadata["error"] = "Could not unflatten file"
                 else:
-                    metadata["json"] = str(json_file_name)
+                    metadata["json"] = json_file_name
 
         metadata["acceptable_license"] = dataset["license"] in acceptable_licenses
 
@@ -424,9 +425,7 @@ def get(args):
         # registry might experience fetching the data.
         for i in range(0, 5):
             try:
-                res = session.get(
-                    "https://registry.threesixtygiving.org/data.json"
-                )
+                res = session.get("https://registry.threesixtygiving.org/data.json")
 
                 data_all = res.json()
                 if len(data_all) > 0:
