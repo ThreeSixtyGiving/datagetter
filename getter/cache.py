@@ -6,6 +6,7 @@ import hashlib
 DATABASE_NAME = "cache_datagetter.db"
 CACHE_DIR = "cache_dir"
 
+
 class DatagetterCacheError(Exception):
     pass
 
