@@ -3,11 +3,15 @@ import json
 import os
 import shutil
 import tempfile
+import time
 import traceback
 from multiprocessing import Pool
 
 import flattentool
 import requests
+from urllib3.util import Retry
+from requests.adapters import HTTPAdapter
+
 import email.headerregistry  # (content-disposition header parser)
 import strict_rfc3339
 from jsonschema import validate, ValidationError, FormatChecker
@@ -42,6 +46,17 @@ CONTENT_TYPE_MAP = {
 data_valid = []
 data_acceptable_license = []
 data_acceptable_license_valid = []
+
+session = requests.Session()
+retries = Retry(
+    total=3,
+    backoff_factor=0.1,
+    status_forcelist=[502, 503, 504],
+    allowed_methods={"POST"},
+)
+
+session.mount("https://", HTTPAdapter(max_retries=retries))
+session.mount("http://", HTTPAdapter(max_retries=retries))
 
 
 def convert_spreadsheet(
@@ -111,7 +126,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
             return dataset
 
     try:
-        r = None
+        res = None
 
         metadata = dataset.get("datagetter_metadata", {})
         dataset["datagetter_metadata"] = metadata
@@ -128,13 +143,13 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
 
             try:
                 print("Fetching %s" % url)
-                r = requests.get(
+                res = session.get(
                     url,
                     headers={
                         "User-Agent": "datagetter (https://github.com/ThreeSixtyGiving/datagetter)"
                     },
                 )
-                r.raise_for_status()
+                res.raise_for_status()
 
                 metadata["downloads"] = True
             except Exception as e:
@@ -153,16 +168,16 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                 if not isinstance(e, requests.exceptions.HTTPError):
                     return dataset
 
-            content_type = r.headers.get("content-type", "").split(";")[0].lower()
+            content_type = res.headers.get("content-type", "").split(";")[0].lower()
             file_type = None
 
             if content_type and content_type in CONTENT_TYPE_MAP:
                 file_type = CONTENT_TYPE_MAP[content_type]
-            elif "content-disposition" in r.headers:
+            elif "content-disposition" in res.headers:
                 # When webserver serves file as an attachment rather than direct download
                 # We need to parse the header to get the filename and filetype.
                 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
-                content_disposition = r.headers.get("content-disposition")
+                content_disposition = res.headers.get("content-disposition")
                 filename = dict(
                     email.headerregistry.parser.parse_content_disposition_header(
                         content_disposition
@@ -182,7 +197,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
             # e.g. a 500 error being output without the proper status code.
             if file_type == "json":
                 try:
-                    json.loads(r.text)
+                    json.loads(res.text)
                 except ValueError:
                     print("\n\nJSON file provided by webserver is invalid")
                     metadata["downloads"] = False
@@ -195,7 +210,7 @@ def fetch_and_convert(args, dataset, schema_path, package_schema):
                 args.data_dir + "/original/" + dataset["identifier"] + "." + file_type
             )
             with open(original_file_path, "wb") as fp:
-                fp.write(r.content)
+                fp.write(res.content)
         else:
             # --no-download arg
 
@@ -351,13 +366,13 @@ def file_cache_schema(schema_branch):
     tmp_dir = tempfile.mkdtemp()
     schema_path = os.path.join(tmp_dir, "360-giving-schema.json")
     print("\nDownloading 360Giving Schema...\n")
-    r = requests.get(
+    res = session.get(
         f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{schema_branch}/schema/360-giving-schema.json"
     )
-    r.raise_for_status()
+    res.raise_for_status()
 
     with open(schema_path, "w") as fp:
-        fp.write(r.text)
+        fp.write(res.text)
 
     print("Schema Download successful.\n")
     return schema_path
@@ -366,7 +381,7 @@ def file_cache_schema(schema_branch):
 def get(args):
     schema_path = file_cache_schema(args.schema_branch)
     package_schema = json.loads(
-        requests.get(
+        session.get(
             f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-package-schema.json"
         ).text
     )
@@ -406,10 +421,25 @@ def get(args):
 
     elif args.download:
         mkdirs(args.data_dir, False)
-        r = requests.get("https://registry.threesixtygiving.org/data.json")
-        with open("%s/data_original.json" % args.data_dir, "w") as fp:
-            fp.write(r.text)
-        data_all = r.json()
+
+        # Try the registry 5 times to get valid data.json output
+        # This guards against temporary downtime or other issues that the
+        # registry might experience fetching the data.
+        for i in range(0, 5):
+            try:
+                res = session.get(
+                    "https://registry.threesixtygiving.org/data.json"
+                )
+
+                data_all = res.json()
+                if len(data_all) > 0:
+                    with open("%s/data_original.json" % args.data_dir, "w") as fp:
+                        fp.write(res.text)
+                    break
+            except json.JSONDecodeError:
+                print("Warning: Registry JSON data error, retrying in 1 second...")
+                time.sleep(1)
+                continue
 
     else:
         print("No source for data")
