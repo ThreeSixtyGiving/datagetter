@@ -30,13 +30,6 @@ def main():
     parser.add_argument(
         "--threads", dest="threads", action="store", type=int, default=4
     )
-    parser.add_argument(
-        "--socks5",
-        dest="socks5_proxy",
-        action="store",
-        help="Use a socks5 proxy to fetch publisher data. Example --socks5=socks5://host:port",
-        default=None,
-    )
 
     parser.add_argument(
         "--limit-downloads",
