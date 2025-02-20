@@ -310,7 +310,7 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
                         f"Warning: File {json_file_name} does not conform to 360Giving standard"
                     )
                     # Non-standard data breaks tools so get rid of it
-                    #                    metadata['json'] = None
+                    metadata["json"] = None
                     metadata["valid"] = False
                     metadata["error"] = (
                         "File does not conform to the 360Giving standard"
