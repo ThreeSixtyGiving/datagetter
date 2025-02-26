@@ -1,0 +1,5052 @@
+{
+    "grants": [
+        {
+            "id": "360G-Cloudesley-17",
+            "title": "Grant to St Mary Islington",
+            "description": "Grant to St Mary Islington",
+            "currency": "GBP",
+            "amountAwarded": 500,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-17T00:00:00+00:00",
+                    "endDate": "2016-12-17T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Islington",
+                    "id": "GB-CHC-CN1131900",
+                    "charityNumber": "CN1131900",
+                    "url": "www.stmaryislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CCH-205959"
+                }
+            ],
+            "Request No": 17,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-18",
+            "title": "Grant to St Augustine Highbury New Park",
+            "description": "Grant to St Augustine Highbury New Park",
+            "currency": "GBP",
+            "amountAwarded": 5300,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-18T00:00:00+00:00",
+                    "endDate": "2016-12-18T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Augustine Highbury New Park",
+                    "url": "www.staugustine.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "360G-cloudsley"
+                }
+            ],
+            "Request No": 18,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-19",
+            "title": "Grant to Christ Church Highbury",
+            "currency": "GPB",
+            "amountAwarded": 6120,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-19T00:00:00+00:00",
+                    "endDate": "2016-12-19T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 19,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-21",
+            "title": "Grant to St Luke West Holloway",
+            "currency": "GBP",
+            "amountAwarded": 16500,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-20T00:00:00+00:00",
+                    "endDate": "2016-12-20T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Luke West Holloway",
+                    "url": "http://www.saintlukeschurch.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 21,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-22",
+            "title": "Grant to mark.tollingtonpark@email.co.uk",
+            "currency": "GBP",
+            "amountAwarded": 13070,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-21T00:00:00+00:00",
+                    "endDate": "2016-12-21T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark's Tollington Park",
+                    "companyNumber": "SC2343",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CR-205959"
+                }
+            ],
+            "Request No": 22,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-24",
+            "title": "Grant to St Andrew Whitehall Park",
+            "description": "Gutter work and roof repairs",
+            "currency": "GBP",
+            "amountAwarded": 15000,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-22T00:00:00+00:00",
+                    "endDate": "2016-12-22T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew Whitehall Park",
+                    "id": "GB-CHC-1152160",
+                    "charityNumber": "1152160",
+                    "url": "http://www.standrewsn19.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 24,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-26",
+            "title": "Grant to Hope Church - St Mary Magdalene Grant to St Andrew Whitehall Park Grant to St Silas Pentonville Grant to St Andrew Whitehall Park",
+            "description": "Sound system replacement",
+            "currency": "GBP",
+            "amountAwarded": 13000,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-23T00:00:00+00:00",
+                    "endDate": "2016-12-23T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Hope Church - St Mary Magdalene",
+                    "id": "360G-Cloudesley-Org:17",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 26,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-27",
+            "title": "Grant to St Silas Pentonville",
+            "description": "Installation of new heating system in church",
+            "currency": "GBP",
+            "amountAwarded": 18500,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-24T00:00:00+00:00",
+                    "endDate": "2016-12-24T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Silas Pentonville",
+                    "id": "360G-Cloudesley-Org:19",
+                    "companyNumber": "9876543",
+                    "url": "http://www.saint-silas.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 27,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-29",
+            "title": "Grant to St Thomas Finsbury Park",
+            "description": "Feasibility study",
+            "currency": "GBP",
+            "amountAwarded": 17279,
+            "awardDate": "2015-11-17T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-25T00:00:00+00:00",
+                    "endDate": "2016-12-25T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Thomas Finsbury Park",
+                    "id": "360G-Cloudesley-Org:21",
+                    "url": "http://www.stthomaschurch.co.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 29,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-25",
+            "title": "Grant to St John the Evangelist Upper Holloway",
+            "description": "Chancel redecoration, lighting and media system",
+            "currency": "GBP",
+            "amountAwarded": "tbc",
+            "awardDate": "2015-12-02T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-26T00:00:00+00:00",
+                    "endDate": "2016-12-26T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St John the Evangelist Upper Holloway",
+                    "id": "360G-Cloudesley-Org:16",
+                    "url": "http://www.stjohnsarchway.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 25,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-28",
+            "title": "Grant to St Stephen Canonbury",
+            "description": "New sound and projection systems",
+            "currency": "GBP",
+            "amountAwarded": 38400,
+            "awardDate": "2015-12-02T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-27T00:00:00+00:00",
+                    "endDate": "2016-12-27T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Stephen Canonbury",
+                    "id": "360G-Cloudesley-Org:20",
+                    "url": "http://www.ststephenscanonbury.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 28,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-48",
+            "title": "Grant to Christ Church Highbury",
+            "description": "Small urgent grant- new pump",
+            "currency": "GBP",
+            "amountAwarded": 530,
+            "awardDate": "2016-02-01T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-28T00:00:00+00:00",
+                    "endDate": "2016-12-28T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-20595990"
+                }
+            ],
+            "Request No": 48,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-106",
+            "title": "Grant to St Mark's Tollington Park",
+            "description": "New boilers and pressurisation unit ",
+            "currency": "GBP",
+            "amountAwarded": 4600,
+            "awardDate": "2016-05-05T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-29T00:00:00+00:00",
+                    "endDate": "2016-12-29T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark's Tollington Park",
+                    "id": "360G-Cloudesley-Org:11",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 106,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-99",
+            "title": "Grant to St Andrew's Church Thornhill Square",
+            "description": "Floor repair work",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2016-05-25T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-30T00:00:00+00:00",
+                    "endDate": "2016-12-30T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Church Thornhill Square",
+                    "id": "GB-CHC-1130552",
+                    "charityNumber": "1130552",
+                    "url": "http://www.standrewsislington.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205960"
+                }
+            ],
+            "Request No": 99,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-100",
+            "title": "Grant to Christ Church Highbury",
+            "description": "Emergency lighting and heater system",
+            "currency": "GBP",
+            "amountAwarded": 1375,
+            "awardDate": "2016-05-25T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2015-12-31T00:00:00+00:00",
+                    "endDate": "2016-12-31T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205961"
+                }
+            ],
+            "Request No": 100,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-102",
+            "title": "Grant to Emmanuel Hornsey Road",
+            "description": "Removal and replacement of kitchen units",
+            "currency": "GBP",
+            "amountAwarded": 16000,
+            "awardDate": "2016-05-25T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-01T00:00:00+00:00",
+                    "endDate": "2017-01-01T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Emmanuel Hornsey Road",
+                    "id": "360G-Cloudesley-Org:12",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205962"
+                }
+            ],
+            "Request No": 102,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-98",
+            "title": "Grant to St Mary Islington",
+            "description": "Works on spire and tower",
+            "currency": "GBP",
+            "amountAwarded": 30650,
+            "awardDate": "2016-06-08T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-02T00:00:00+00:00",
+                    "endDate": "2017-01-02T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Islington",
+                    "id": "GB-CHC-11319",
+                    "charityNumber": "1131900",
+                    "url": "http://www.stmaryislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205963"
+                }
+            ],
+            "Request No": 98,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-101",
+            "title": "Grant to St Jude and St Paul Mildmay Grove",
+            "description": "Bell refurbishment and repairs to tower",
+            "currency": "GBP",
+            "amountAwarded": 26500,
+            "awardDate": "2016-06-08T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-03T00:00:00+00:00",
+                    "endDate": "2017-01-03T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Jude and St Paul Mildmay Grove",
+                    "id": "360G-Cloudesley-Org:9",
+                    "url": "http://www.sjsp.org.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205964"
+                }
+            ],
+            "Request No": 101,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-103",
+            "title": "Grant to St Saviour's Hanley Road",
+            "description": "Professional fees for feasibility study",
+            "currency": "GBP",
+            "amountAwarded": 18000,
+            "awardDate": "2016-06-08T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-04T00:00:00+00:00",
+                    "endDate": "2017-01-04T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Saviour's Hanley Road",
+                    "id": "360G-Cloudesley-Org:13",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 103,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-117",
+            "title": "Grant to St Andrew Whitehall Park",
+            "description": "Electrical works",
+            "currency": "GBP",
+            "amountAwarded": 23000,
+            "awardDate": "2016-06-08T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-05T00:00:00+00:00",
+                    "endDate": "2017-01-05T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew Whitehall Park",
+                    "id": "GB-CCH-1152160",
+                    "charityNumber": "1152160",
+                    "url": "http://www.standrewsn19.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 117,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-105",
+            "title": "Grant to Hope Church - St David's ",
+            "description": "Corrective mechanical and electrical works",
+            "currency": "GBP",
+            "amountAwarded": 40000,
+            "awardDate": "2016-06-08T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-06T00:00:00+00:00",
+                    "endDate": "2017-01-06T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Hope Church - St David's ",
+                    "id": "360G-Cloudesley-Org:18",
+                    "companyNumber": "07654321",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 105,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-97",
+            "title": "Grant to St Stephen Canonbury",
+            "description": "Disabled access to front of church",
+            "currency": "GBP",
+            "amountAwarded": 3600,
+            "awardDate": "2016-06-08T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-07T00:00:00+00:00",
+                    "endDate": "2017-01-07T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Stephen Canonbury",
+                    "id": "360G-Cloudesley-Org:20",
+                    "url": "http://www.ststephenscanonbury.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 97,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-118",
+            "title": "Grant to Christ Church Highbury",
+            "description": "Substantial repairs to church spire",
+            "currency": "GBP",
+            "amountAwarded": 26975,
+            "awardDate": "2016-06-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-08T00:00:00+00:00",
+                    "endDate": "2017-01-08T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 118,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-183",
+            "title": "Grant to St Mary Islington",
+            "description": "Chancel and nave roof repairs and repairs to the lift",
+            "currency": "GBP",
+            "amountAwarded": 50000,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-09T00:00:00+00:00",
+                    "endDate": "2017-01-09T00:00:00+00:00",
+                    "duration": 12
+                },
+                {
+                    "startDate": "2016-01-19T00:00:00+00:00",
+                    "endDate": "2017-01-19T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Islington",
+                    "id": "GB-CHC-1131900",
+                    "charityNumber": "1131900",
+                    "url": "http://www.stmaryislington.org",
+                    "postalCode": "N1 2TX"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 183,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                },
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes",
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ]
+        },
+        {
+            "id": "360G-Cloudesley-178",
+            "description": "Replacement of PA system, additional lighting in the welcome area and staging\n",
+            "currency": "GBP",
+            "amountAwarded": 11500,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-10T00:00:00+00:00",
+                    "endDate": "2017-01-10T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Church Thornhill Square",
+                    "id": "GB-CHC-1130552",
+                    "charityNumber": "1130552",
+                    "url": "http://www.standrewsislington.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 178,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-181",
+            "description": "Replacement of faulty boilers",
+            "currency": "GBP",
+            "amountAwarded": 21000,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-11T00:00:00+00:00",
+                    "endDate": "2017-01-11T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Augustine's Highbury New Park",
+                    "id": "GB-CHC-1132698",
+                    "charityNumber": "1132698",
+                    "url": "http://www.staugustine.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 181,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-182",
+            "title": "Grant to Christ Church Highbury",
+            "description": "Emergency lighting, internal belfry access and roof repairs",
+            "currency": "GBP",
+            "amountAwarded": 9800,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-12T00:00:00+00:00",
+                    "endDate": "2017-01-12T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 182,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-184",
+            "title": "Grant to St James' Church Islington",
+            "description": "Renovation of church kitchen ",
+            "currency": "GBP",
+            "amountAwarded": 4500,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-13T00:00:00+00:00",
+                    "endDate": "2017-01-13T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James' Church Islington",
+                    "id": "360G-Cloudesley-Org:8",
+                    "url": "http://www.stjamesislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 184,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-187",
+            "title": "Grant to St Jude and St Pauls Church",
+            "description": "New church chairs",
+            "currency": "GBP",
+            "amountAwarded": 15000,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-14T00:00:00+00:00",
+                    "endDate": "2017-01-14T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Jude and St Pauls Church",
+                    "id": "360G-Cloudesley-Org:9",
+                    "url": "http://www.sjsp.org.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 187,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-185",
+            "title": "Grant to St Luke's West Holloway",
+            "description": "Underpinning of church hall",
+            "currency": "GBP",
+            "amountAwarded": 42373.2,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-15T00:00:00+00:00",
+                    "endDate": "2017-01-15T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Luke's West Holloway",
+                    "id": "360G-Cloudesley-Org:10",
+                    "url": "http://www.saintlukeschurch.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 185,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-180",
+            "title": "Grant to Emmanuel Church",
+            "description": "Feasibility Study",
+            "currency": "GBP",
+            "amountAwarded": 4000,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-16T00:00:00+00:00",
+                    "endDate": "2017-01-16T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Emmanuel Church",
+                    "id": "360G-Cloudesley-Org:12",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 180,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-161",
+            "title": "Grant to St Mary Hornsey Rise",
+            "description": "Replace signage outside front of the church",
+            "currency": "GBP",
+            "amountAwarded": 1700,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-17T00:00:00+00:00",
+                    "endDate": "2017-01-17T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Hornsey Rise",
+                    "id": "360G-Cloudesley-Org:14",
+                    "url": "http://www.stmaryshornseyrise.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 161,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-186",
+            "title": "Grant to St Andrew's Whitehall Park",
+            "description": "Replacement of broken fan heaters in church and hall",
+            "currency": "GBP",
+            "amountAwarded": 13000,
+            "awardDate": "2016-11-30T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-18T00:00:00+00:00",
+                    "endDate": "2017-01-18T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Whitehall Park",
+                    "id": "GB-CHC-1152160",
+                    "charityNumber": "1152160",
+                    "url": "http://www.standrewsn19.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 186,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-201",
+            "title": "Grant to St Andrew's Church Thornhill Square",
+            "description": "New church boiler and radiator covers",
+            "currency": "GBP",
+            "amountAwarded": 34000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-20T00:00:00+00:00",
+                    "endDate": "2017-01-20T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Church Thornhill Square",
+                    "id": "GB-CHC-1130552",
+                    "charityNumber": "1130552",
+                    "url": "http://www.standrewsislington.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 201,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-203",
+            "title": "Grant to Christ Church Highbury",
+            "description": "Inspection, repair and replacement of pinnacles, and items of structural stonework, together with the support services of an architect and structural engineer\n",
+            "currency": "GBP",
+            "amountAwarded": 14000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-21T00:00:00+00:00",
+                    "endDate": "2017-01-21T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 203,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-204",
+            "title": "Grant to St George and All Saints Church",
+            "description": "To repair damaged areas of the building; improve the appearance of the building; improve general facilities",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-22T00:00:00+00:00",
+                    "endDate": "2017-01-22T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St George and All Saints Church",
+                    "id": "GB-CHC-1134714",
+                    "charityNumber": "1134714",
+                    "url": "http://www.stgeorgestufnellpark.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 204,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-210",
+            "title": "Grant to St Mary Magdalene Holloway",
+            "description": "Screens (including cabling and fitting); repainting of porches; LED lighting; refurbishment of lobby area\n",
+            "currency": "GBP",
+            "amountAwarded": 21000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-23T00:00:00+00:00",
+                    "endDate": "2017-01-23T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Magdalene Holloway",
+                    "id": "360G-Cloudesley-Org:17",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 210,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-211",
+            "title": "Grant to St Silas Pentonville",
+            "description": "Repair of plaster in church and redecoration of replastered areas; repointing of stonework at lower point of the exterior east wall",
+            "currency": "GBP",
+            "amountAwarded": 7000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-24T00:00:00+00:00",
+                    "endDate": "2017-01-24T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Silas Pentonville",
+                    "id": "360G-Cloudesley-Org:19",
+                    "url": "http://www.saint-silas.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 211,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-212",
+            "title": "Grant to St Thomas Finsbury Park",
+            "description": "Renovation of the organ",
+            "currency": "GBP",
+            "amountAwarded": 25000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-25T00:00:00+00:00",
+                    "endDate": "2017-01-25T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Thomas Finsbury Park",
+                    "id": "360G-Cloudesley-Org:21",
+                    "url": "http://www.stthomaschurch.co.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 212,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-213",
+            "title": "Grant to St James Clerkenwell",
+            "description": "Feasibility Study",
+            "currency": "GBP",
+            "amountAwarded": 6600,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-26T00:00:00+00:00",
+                    "endDate": "2017-01-26T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James Clerkenwell",
+                    "id": "360G-Cloudesley-Org:22",
+                    "url": "http://www.jc-church.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 213,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-214",
+            "title": "Grant to St Mark Clerkenwell",
+            "description": "Construction of an access ramp",
+            "currency": "GBP",
+            "amountAwarded": 30000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-27T00:00:00+00:00",
+                    "endDate": "2017-01-27T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark Clerkenwell",
+                    "id": "360G-Cloudesley-Org:24",
+                    "url": "http://stmarks-clerkenwell.co.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 214,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-200",
+            "title": "Grant to St Clement's Church",
+            "description": "Replace and repair slates and make church watertight; upgrade church access",
+            "currency": "GBP",
+            "amountAwarded": 50000,
+            "awardDate": "2017-05-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-28T00:00:00+00:00",
+                    "endDate": "2017-01-28T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Clement's Church",
+                    "id": "360G-Cloudesley-Org:25",
+                    "url": "http://www.stclementfinsbury.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 200,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-202",
+            "title": "Grant to St Augustine's Highbury New Park",
+            "description": "Urgent external repairs to church building",
+            "currency": "GBP",
+            "amountAwarded": 50000,
+            "awardDate": "2017-06-06T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-29T00:00:00+00:00",
+                    "endDate": "2017-01-29T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Augustine's Highbury New Park",
+                    "id": "GB-CHC-1132698",
+                    "charityNumber": "1132698",
+                    "url": "http://www.staugustine.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 202,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-205",
+            "title": "Grant to St Luke's West Holloway",
+            "description": "To reinstate the church floor following underpinning works; repairing cracks in the walls and redecorating",
+            "amountAwarded": 11000,
+            "awardDate": "2017-06-06T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-30T00:00:00+00:00",
+                    "endDate": "2017-01-30T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Luke's West Holloway",
+                    "id": "360G-Cloudesley-Org:10",
+                    "url": "http://www.saintlukeschurch.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 205,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-306",
+            "title": "Grant to The Church on the Corner",
+            "description": "Commemorative Grant- Stacking chairs",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-10-03T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-01-31T00:00:00+00:00",
+                    "endDate": "2017-01-31T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "The Church on the Corner",
+                    "id": "360G-Cloudesley-Org:4",
+                    "url": "http://www.churchonthecorner.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 306,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-287",
+            "title": "Grant to King's Cross Church (KXC)",
+            "description": "Commemorative Grant- Towards improved PA and AV systems",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-10-18T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-01T00:00:00+00:00",
+                    "endDate": "2017-02-01T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "King's Cross Church (KXC)",
+                    "id": "360G-Cloudesley-Org:27",
+                    "url": "http://kxc.org.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 287,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-301",
+            "title": "Grant to St Mary Islington",
+            "description": "Commemorative Grant- New piano",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-10-28T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-02T00:00:00+00:00",
+                    "endDate": "2017-02-02T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Islington",
+                    "id": "GB-CCH-1131900",
+                    "charityNumber": "1131900",
+                    "url": "http://www.stmaryislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 301,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-307",
+            "title": "Grant to Christ Church Highbury",
+            "description": "Commemorative Grant- To redecorate toilets and install basin; towards redecorating the kitchen",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-10-28T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-03T00:00:00+00:00",
+                    "endDate": "2017-02-03T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 307,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-303",
+            "title": "Grant to Our Most Holy Redeemer Clerkenwell",
+            "description": "Commemorative Grant- Towards new choir project",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-10-28T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-04T00:00:00+00:00",
+                    "endDate": "2017-02-04T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Our Most Holy Redeemer Clerkenwell",
+                    "id": "360G-Cloudesley-Org:23",
+                    "url": "http://holyredeemerclerkenwell.com/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 303,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-304",
+            "title": "Grant to St Mark Clerkenwell",
+            "description": "Commemorative Grant- Install handrails to enable users to mount steps and enter by West door; replace broken lights in West porch with energy efficient lighting",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-11-01T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-05T00:00:00+00:00",
+                    "endDate": "2017-02-05T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark Clerkenwell",
+                    "id": "360G-Cloudesley-Org:24",
+                    "url": "http://stmarks-clerkenwell.co.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 304,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-305",
+            "title": "Grant to Trinity Church",
+            "description": "Commemorative Grant- New bibles; PA equipment; new video projector",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-11-06T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-06T00:00:00+00:00",
+                    "endDate": "2017-02-06T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Trinity Church",
+                    "id": "360G-Cloudesley-Org:26",
+                    "url": "https://www.trinityislington.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 305,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-309",
+            "title": "Grant to St Mary's Hornsey Rise",
+            "description": "Commemorative Grant- To replace current lighting fittings",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-11-14T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-07T00:00:00+00:00",
+                    "endDate": "2017-02-07T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary's Hornsey Rise",
+                    "id": "360G-Cloudesley-Org:14",
+                    "url": "http://www.stmaryshornseyrise.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 309,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-308",
+            "title": "Grant to St Stephen Canonbury",
+            "description": "Commemorative Grant- Install a fire alarm system throughout the building",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-11-14T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-08T00:00:00+00:00",
+                    "endDate": "2017-02-08T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Stephen Canonbury",
+                    "id": "360G-Cloudesley-Org:20",
+                    "postalCode": "N1 2DF",
+                    "url": "http://www.ststephenscanonbury.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 308,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-312",
+            "title": "Grant to St Thomas Finsbury Park",
+            "description": "Commemorative Grant - Black altar frontal; repair of historic banner",
+            "currency": "GBP",
+            "amountAwarded": 3700,
+            "awardDate": "2017-11-15T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-09T00:00:00+00:00",
+                    "endDate": "2017-02-09T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Thomas Finsbury Park",
+                    "id": "360G-Cloudesley-Org:21",
+                    "postalCode": "N4 2QY",
+                    "url": "http://www.stthomaschurch.co.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 312,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-310",
+            "title": "Grant to St Mary Magdalene Holloway",
+            "description": "Commemorative Grant - Update IT for maintenance of services",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-11-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-10T00:00:00+00:00",
+                    "endDate": "2017-02-10T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Magdalene Holloway",
+                    "id": "360G-Cloudesley-Org:17",
+                    "postalCode": "N7 8LT",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 310,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-311",
+            "title": "Grant to St David's Church",
+            "description": "Commemorative Grant - To upgrade AV equipment; maintain and update musical instruments; upgrade CCTV",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-11-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-11T00:00:00+00:00",
+                    "endDate": "2017-02-11T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St David's Church",
+                    "id": "360G-Cloudesley-Org:18",
+                    "postalCode": "N7 8AB",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 311,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-288",
+            "title": "Grant to St Andrew's Church Thornhill Square",
+            "description": "New signage outside the church",
+            "currency": "GBP",
+            "amountAwarded": 4620,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-12T00:00:00+00:00",
+                    "endDate": "2017-02-12T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Church Thornhill Square",
+                    "id": "GB-CHC-1130552",
+                    "charityNumber": "1130552",
+                    "postalCode": "N1 1BQ",
+                    "url": "http://www.standrewsislington.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 288,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-314",
+            "title": "Grant to St Augustine's Highbury New Park",
+            "description": "Towards the cost of repairs to the north west pinnacle",
+            "currency": "GBP",
+            "amountAwarded": 25000,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-13T00:00:00+00:00",
+                    "endDate": "2017-02-13T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Augustine's Highbury New Park",
+                    "id": "GB-CHC-1132698",
+                    "charityNumber": "1132698",
+                    "postalCode": "N5 2DR",
+                    "url": "http://www.staugustine.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 314,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-300",
+            "title": "Grant to St Jude and St Pauls Church",
+            "description": "Repairs and redecoration in church and church hall",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-15T00:00:00+00:00",
+                    "endDate": "2017-02-15T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Jude and St Pauls Church",
+                    "id": "360G-Cloudesley-Org:9",
+                    "postalCode": "N1 2PT",
+                    "url": "http://www.sjsp.org.uk/"
+                }
+            ],
+            "Request No": 300,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-291",
+            "title": "Grant to St Luke's West Holloway",
+            "description": "Upgrade the sound system",
+            "currency": "GBP",
+            "amountAwarded": 28600,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-16T00:00:00+00:00",
+                    "endDate": "2017-02-16T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Luke's West Holloway",
+                    "id": "360G-Cloudesley-Org:10",
+                    "postalCode": "N7 9RE",
+                    "url": "http://www.saintlukeschurch.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 291,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-292",
+            "title": "Grant to St Mark's Church",
+            "description": "Refurbishment and redecoration of room after removal of organ",
+            "currency": "GBP",
+            "amountAwarded": 8200,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-17T00:00:00+00:00",
+                    "endDate": "2017-02-17T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark's Church",
+                    "id": "360G-Cloudesley-Org:11",
+                    "postalCode": "N4 3LD",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 292,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-293",
+            "title": "Grant to Emmanuel Church",
+            "description": "Demolish the current toilet layout and create a new unisex bathroom and accessible toilet",
+            "currency": "GBP",
+            "amountAwarded": 28000,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-18T00:00:00+00:00",
+                    "endDate": "2017-02-18T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Emmanuel Church",
+                    "id": "360G-Cloudesley-Org:12",
+                    "postalCode": "N7 6DU",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 293,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-294",
+            "title": "Grant to St Mary's Hornsey Rise",
+            "description": "To fit new toilets and plumbing underfloor into the exisiting floor area of the current toilets",
+            "currency": "GBP",
+            "amountAwarded": 40000,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-19T00:00:00+00:00",
+                    "endDate": "2017-02-19T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary's Hornsey Rise",
+                    "id": "360G-Cloudesley-Org:14",
+                    "postalCode": "N19 3AQ",
+                    "url": "http://www.stmaryshornseyrise.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 294,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-295",
+            "title": "Grant to St Mary Magdalene Holloway",
+            "description": "Repair leaks to roof and porches; part renewal of electrical system",
+            "currency": "GBP",
+            "amountAwarded": 14800,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-20T00:00:00+00:00",
+                    "endDate": "2017-02-20T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Magdalene Holloway",
+                    "id": "360G-Cloudesley-Org:17",
+                    "postalCode": "N7 8LT",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 295,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-296",
+            "title": "Grant to St David's Church",
+            "description": "Redress sections of lead flashings along tops of aisle roofs; point in lead flashings with sealant to prevent leaks",
+            "currency": "GBP",
+            "amountAwarded": 6000,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-21T00:00:00+00:00",
+                    "endDate": "2017-02-21T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St David's Church",
+                    "id": "360G-Cloudesley-Org:18",
+                    "postalCode": "N7 8AB",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 296,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-297",
+            "title": "Grant to St Silas Pentonville",
+            "description": "Removal of asbestos from the boiler house",
+            "currency": "GBP",
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-22T00:00:00+00:00",
+                    "endDate": "2017-02-22T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Silas Pentonville",
+                    "id": "360G-Cloudesley-Org:19",
+                    "postalCode": "N1 9UL",
+                    "url": "http://www.saint-silas.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 297,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-253",
+            "title": "Grant to St Stephen Canonbury",
+            "description": "Towards external works to the church and hall",
+            "currency": "GBP",
+            "amountAwarded": 43000,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-23T00:00:00+00:00",
+                    "endDate": "2017-02-23T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Stephen Canonbury",
+                    "id": "360G-Cloudesley-Org:20",
+                    "postalCode": "N1 2DF",
+                    "url": "http://www.ststephenscanonbury.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 253,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-298",
+            "title": "Grant to St James Clerkenwell",
+            "description": "To reinstate the original south east side entrance of the church; to restore the stone steps, landing and columns at both entrances to the church",
+            "currency": "GBP",
+            "amountAwarded": 37000,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-24T00:00:00+00:00",
+                    "endDate": "2017-02-24T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James Clerkenwell",
+                    "id": "360G-Cloudesley-Org:22",
+                    "postalCode": "EC1R 0EA",
+                    "url": "http://www.jc-church.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 298,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-313",
+            "title": "Grant to St Luke's West Holloway",
+            "description": "Commemorative Grant - To refurbish/redecorate the church vestry",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-12-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-25T00:00:00+00:00",
+                    "endDate": "2017-02-25T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "id": "360G-Cloudesley-Org:10",
+                    "postalCode": "N7 9RE",
+                    "url": "http://www.saintlukeschurch.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 313,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-315",
+            "title": "Grant to St Andrew's Church Thornhill Square",
+            "description": "Commemorative Grant - For fire safety/health and safety measures",
+            "currency": "GBP",
+            "amountAwarded": 0,
+            "awardDate": "2017-12-07T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-26T00:00:00+00:00",
+                    "endDate": "2017-02-26T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Church Thornhill Square",
+                    "id": "GB-CHC-1130552",
+                    "charityNumber": "1130552",
+                    "postalCode": "N1 1BQ",
+                    "url": "http://www.standrewsislington.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 315,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-316",
+            "title": "Grant to St Andrew's Whitehall Park",
+            "description": "Commemorative Grant - New lighting to front of church",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-12-07T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-28T00:00:00+00:00",
+                    "endDate": "2017-02-28T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Whitehall Park",
+                    "id": "GB-CHC-1152160",
+                    "charityNumber": "1152160",
+                    "postalCode": "N19 3BG",
+                    "url": "http://www.standrewsn19.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 316,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-318",
+            "title": "Grant to St Silas Pentonville",
+            "description": "Commemorative Grant - to enhance lighting in sanctuary; towards the sound system",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-12-07T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-29T00:00:00+00:00",
+                    "endDate": "2017-03-01T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Silas Pentonville",
+                    "id": "360G-Cloudesley-Org:19",
+                    "postalCode": "N1 9UL",
+                    "url": "http://www.saint-silas.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 318,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-341",
+            "title": "Grant to St Mark's Church",
+            "description": "Commemorative Grant- New office space in worship area of church",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-02-22T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-01T00:00:00+00:00",
+                    "endDate": "2017-03-02T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark's Church",
+                    "id": "360G-Cloudesley-Org:11",
+                    "postalCode": "N4 3LD",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 341,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-342",
+            "title": "Grant to Emmanuel Church",
+            "description": "Commemorative Grant- To install secondary glazing. Remainder of money to be used to upgrade keyboard.",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-02-22T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-02T00:00:00+00:00",
+                    "endDate": "2017-03-03T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "id": "360G-Cloudesley-Org:12",
+                    "postalCode": "N7 6DU",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 342,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-343",
+            "title": "Grant to St Saviour's Church",
+            "description": "Commemorative Grant- Upgrade music equipment and computer used for projection",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-02-22T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-03T00:00:00+00:00",
+                    "endDate": "2017-03-04T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Saviour's Church",
+                    "id": "360G-Cloudesley-Org:13",
+                    "postalCode": "N4 3DQ",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 343,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-390",
+            "title": "Grant to St Mary Islington",
+            "description": "SCBP Small Grant- To reduce draughts and improve output from radiators",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-04T00:00:00+00:00",
+                    "endDate": "2017-03-05T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Islington",
+                    "id": "GB-CR-1131900",
+                    "charityNumber": "1131900",
+                    "postalCode": "N1 2TX",
+                    "url": "http://www.stmaryislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 390,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-369",
+            "title": "Grant to St Andrew's Church Thornhill Square",
+            "description": "SCBP Small Grant- LED lighting, window repairs and dual flush installed in the toilets",
+            "currency": "GBP",
+            "amountAwarded": 7575,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-05T00:00:00+00:00",
+                    "endDate": "2017-03-06T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Church Thornhill Square",
+                    "id": "GB-CHC-1130552",
+                    "charityNumber": "1130552",
+                    "postalCode": "N1 1BQ",
+                    "url": "http://www.standrewsislington.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 369,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-348",
+            "title": "Grant to The Church on the Corner",
+            "description": "SCBP Small Grant- Draught-proofing of external doors and secondary glazing for leaded windows ",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-06T00:00:00+00:00",
+                    "endDate": "2017-03-07T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "The Church on the Corner",
+                    "id": "360G-Cloudesley-Org:4",
+                    "postalCode": "N1 0LA",
+                    "url": "http://www.churchonthecorner.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 348,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-345",
+            "title": "Grant to Christ Church Highbury",
+            "description": "SCBP Small Grant- LED lighting ",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-08T00:00:00+00:00",
+                    "endDate": "2017-03-09T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "postalCode": "N5 1SA",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 345,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-391",
+            "title": "Grant to St George and All Saints Church",
+            "description": "SCBP Small Grant- Draught proofing",
+            "currency": "GBP",
+            "amountAwarded": 9843,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-09T00:00:00+00:00",
+                    "endDate": "2017-03-10T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St George and All Saints Church",
+                    "id": "GB-CHC-1134714",
+                    "charityNumber": "1134714",
+                    "postalCode": "N7 0ND",
+                    "url": "http://www.stgeorgestufnellpark.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 391,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-382",
+            "title": "Grant to St James' Church Islington",
+            "description": "SCBP Small Grant- Secondary glazing to be fitted above each of the six nave radiators located on external walls",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-10T00:00:00+00:00",
+                    "endDate": "2017-03-11T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James' Church Islington",
+                    "id": "360G-Cloudesley-Org:8",
+                    "postalCode": "N1 7DS",
+                    "url": "http://www.stjamesislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 382,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-397",
+            "title": "Grant to St James' Church Islington",
+            "description": "Commemorative Grant- New stacking chairs",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-11T00:00:00+00:00",
+                    "endDate": "2017-03-12T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James' Church Islington",
+                    "id": "360G-Cloudesley-Org:8",
+                    "postalCode": "N1 7DS",
+                    "url": "http://www.stjamesislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 397,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-347",
+            "title": "Grant to St Luke's West Holloway",
+            "description": "SCBP Small Grant-Upgrade lighting and draft-proofing",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-12T00:00:00+00:00",
+                    "endDate": "2017-03-13T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Luke's West Holloway",
+                    "id": "360G-Cloudesley-Org:10",
+                    "postalCode": "N7 9RE",
+                    "url": "http://www.saintlukeschurch.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 347,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-387",
+            "title": "Grant to St Mark's Church",
+            "description": "SCBP Small Grant- To install a Solar PV system and reduce our reliance on fossil fuel energy",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-13T00:00:00+00:00",
+                    "endDate": "2017-03-14T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark's Church",
+                    "id": "360G-Cloudesley-Org:11",
+                    "postalCode": "N4 3LD",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 387,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-386",
+            "title": "Grant to Emmanuel Church",
+            "description": "SCBP Small Grant- Solar PV System on the church roof to reduce reliance on fossil fuel sourced electricity",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-14T00:00:00+00:00",
+                    "endDate": "2017-03-15T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Emmanuel Church",
+                    "id": "360G-Cloudesley-Org:12",
+                    "postalCode": "N7 6DU",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 386,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-374",
+            "title": "Grant to St Mary's Hornsey Rise",
+            "description": "SCBP Small Grant- replace inner front doors; solar development costs",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-15T00:00:00+00:00",
+                    "endDate": "2017-03-16T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary's Hornsey Rise",
+                    "id": "360G-Cloudesley-Org:14",
+                    "postalCode": "N19 3AQ",
+                    "url": "http://www.stmaryshornseyrise.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 374,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-377",
+            "title": "Grant to St John the Evangelist",
+            "description": "SCBP Small Grant- LED lighting in church and hall",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-16T00:00:00+00:00",
+                    "endDate": "2017-03-17T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St John the Evangelist",
+                    "id": "360G-Cloudesley-Org:16",
+                    "postalCode": "N19 4PZ",
+                    "url": "http://www.stjohnsarchway.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 377,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-398",
+            "title": "Grant to St John the Evangelist",
+            "description": "Commemorative Grant- Redecorate the church hall",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-17T00:00:00+00:00",
+                    "endDate": "2017-03-18T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St John the Evangelist",
+                    "id": "360G-Cloudesley-Org:16",
+                    "postalCode": "N19 4PZ",
+                    "url": "http://www.stjohnsarchway.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 398,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-379",
+            "title": "Grant to St Mary Magdalene Holloway",
+            "description": "SCBP Small Grant- LED downlighters, new boiler, TVRs, programmable thermostats; commissioning consultancy to assist in preparing for the large commemorative grant .",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-18T00:00:00+00:00",
+                    "endDate": "2017-03-19T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Magdalene Holloway",
+                    "id": "360G-Cloudesley-Org:17",
+                    "postalCode": "N7 8LT",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 379,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-376",
+            "title": "Grant to St David's Church",
+            "description": "SCBP Small-Enhance energy efficiency of current installations by producing accurate and fool-proof methodology for building management systems, & by replacing 30x150W incandescent fittings on the feature cross with LED bulbs.",
+            "currency": "GBP",
+            "amountAwarded": 8800,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-19T00:00:00+00:00",
+                    "endDate": "2017-03-20T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St David's Church",
+                    "id": "360G-Cloudesley-Org:18",
+                    "postalCode": "N7 8AB",
+                    "url": "http://www.hopechurchislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 376,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-350",
+            "title": "Grant to St Silas Pentonville",
+            "description": "SCBP Small Grant- To add secondary glazing to the ground floor windows in the worship space and sacristy",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-20T00:00:00+00:00",
+                    "endDate": "2017-03-21T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Silas Pentonville",
+                    "id": "360G-Cloudesley-Org:19",
+                    "postalCode": "N1 9UL",
+                    "url": "http://www.saint-silas.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 350,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-355",
+            "title": "Grant to St Stephen Canonbury",
+            "description": "SCBP Small Grant- Costs to develop the solar panel installation and to install LED lighting in the church halls and kitchen",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-21T00:00:00+00:00",
+                    "endDate": "2017-03-22T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Stephen Canonbury",
+                    "id": "360G-Cloudesley-Org:20",
+                    "postalCode": "N1 2DF",
+                    "url": "http://www.ststephenscanonbury.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 355,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-371",
+            "title": "Grant to St Thomas Finsbury Park",
+            "description": "SCBP Small Grant- Draught proofing and conversion to LED lighting",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-22T00:00:00+00:00",
+                    "endDate": "2017-03-23T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Thomas Finsbury Park",
+                    "id": "360G-Cloudesley-Org:21",
+                    "postalCode": "N4 2QY",
+                    "url": "http://www.stthomaschurch.co.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 371,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-302",
+            "title": "Grant to St James Clerkenwell",
+            "description": "Commemorative Grant- To repair and restore several items of furniture in the church that are on the official Church Registry",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-23T00:00:00+00:00",
+                    "endDate": "2017-03-24T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James Clerkenwell",
+                    "id": "360G-Cloudesley-Org:22",
+                    "postalCode": "EC1R 0EA",
+                    "url": "http://www.jc-church.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 302,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-349",
+            "title": "Grant to St James Clerkenwell",
+            "description": "SCBP Small Grant-LED lighting in the church and crypt areas",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-24T00:00:00+00:00",
+                    "endDate": "2017-03-25T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James Clerkenwell",
+                    "id": "360G-Cloudesley-Org:22",
+                    "postalCode": "EC1R 0EA",
+                    "url": "http://www.jc-church.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 349,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-344",
+            "title": "Grant to Our Most Holy Redeemer Clerkenwell",
+            "description": "SCBP Small Grant- In line with AECOM recommendations ,to enable the installation of secondary glazing in the parish hall which will reduce heat loss , lower energy bills and improve out environmental sustainability .",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-25T00:00:00+00:00",
+                    "endDate": "2017-03-26T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Our Most Holy Redeemer Clerkenwell",
+                    "id": "360G-Cloudesley-Org:23",
+                    "postalCode": "EC1R 4QE",
+                    "url": "http://holyredeemerclerkenwell.com/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 344,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-363",
+            "title": "Grant to St Mark Clerkenwell",
+            "description": "SCBP Small- LED lights/dimmer system; renewing electrical wiring in the roof void over the church",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "43194",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-26T00:00:00+00:00",
+                    "endDate": "2017-03-27T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark Clerkenwell",
+                    "id": "360G-Cloudesley-Org:24",
+                    "postalCode": "EC1R 1XX",
+                    "url": "http://stmarks-clerkenwell.co.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 363,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-346",
+            "title": "Grant to St Clement's Church",
+            "description": "SCBP Small Grant- To replace current lamps and fittings with low-energy LED alternatives",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-27T00:00:00+00:00",
+                    "endDate": "2017-03-28T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Clement's Church",
+                    "id": "360G-Cloudesley-Org:25",
+                    "postalCode": "EC1V 8DA",
+                    "url": "http://www.stclementfinsbury.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 346,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-365",
+            "title": "Grant to St Andrew's Whitehall Park",
+            "description": "SCBP Small Grant- Improved Heating controls and LED lighting",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-12T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-28T00:00:00+00:00",
+                    "endDate": "2017-03-29T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Whitehall Park",
+                    "id": "GB-CHC-1152160",
+                    "charityNumber": "1152160",
+                    "postalCode": "N19 3BG",
+                    "url": "http://www.standrewsn19.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 365,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-401",
+            "title": "Grant to All Saints Church",
+            "description": "Commemorative Grant- Mission Praise books and Bibles; new laptop for church office",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-04-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-29T00:00:00+00:00",
+                    "endDate": "2017-03-30T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "All Saints Church",
+                    "id": "360G-Cloudesley-Org:3",
+                    "postalCode": "N1 9QW",
+                    "url": "http://www.allsaintsislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 401,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-402",
+            "title": "Grant to St Jude and St Pauls Church",
+            "description": "Commemorative Grant- Upgrading the lobby area, including new glass doors",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-04-23T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-30T00:00:00+00:00",
+                    "endDate": "2017-03-31T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Jude and St Pauls Church",
+                    "id": "360G-Cloudesley-Org:9",
+                    "postalCode": "N1 2PT",
+                    "url": "http://www.sjsp.org.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 402,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-403",
+            "title": "Grant to St Augustine's Highbury New Park",
+            "description": "Commemorative Grant- To replace the carpet in the lounge area (entrance & lobby)",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-04-26T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-31T00:00:00+00:00",
+                    "endDate": "2017-04-01T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Augustine's Highbury New Park",
+                    "id": "GB-CHC-1132698",
+                    "charityNumber": "1132698",
+                    "postalCode": "N5 2DR",
+                    "url": "http://www.staugustine.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 403,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-408",
+            "title": "Grant to St Thomas Finsbury Park",
+            "description": "Commemorative Grant - To replace the Sacred Heart frontal",
+            "currency": "GBP",
+            "amountAwarded": 1300,
+            "awardDate": "2018-05-01T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-01T00:00:00+00:00",
+                    "endDate": "2017-04-02T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Thomas Finsbury Park",
+                    "id": "360G-Cloudesley-Org:21",
+                    "postalCode": "N4 2QY",
+                    "url": "http://www.stthomaschurch.co.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 408,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-400",
+            "title": "Grant to St Clement's Church",
+            "description": "Commemorative Grant- Kitchen refurbishment",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2018-05-01T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-02T00:00:00+00:00",
+                    "endDate": "2017-04-03T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Clement's Church",
+                    "id": "360G-Cloudesley-Org:25",
+                    "postalCode": "EC1V 8DA",
+                    "url": "http://www.stclementfinsbury.org/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 400,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-404",
+            "title": "Grant to St Jude and St Pauls Church",
+            "description": "SCBP Small Grant- Replace church lighting; enhance the worship area",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-05-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-03T00:00:00+00:00",
+                    "endDate": "2017-04-04T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Jude and St Pauls Church",
+                    "id": "360G-Cloudesley-Org:9",
+                    "postalCode": "N1 2PT",
+                    "url": "http://www.sjsp.org.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 404,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-405",
+            "title": "Grant to St Saviour's Church",
+            "description": "SCBP Small Grant- Upgrading the lighting system, replacing current bulbs with LED",
+            "currency": "GBP",
+            "amountAwarded": 6000,
+            "awardDate": "2018-05-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2017-04-04T00:00:00+00:00",
+                    "endDate": "2016-04-05T00:00:00+00:00",
+                    "duration": -12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Saviour's Church",
+                    "id": "360G-Cloudesley-Org:13",
+                    "postalCode": "N4 3DQ",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 405,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-351",
+            "title": "Grant to St Andrew's Church Thornhill Square",
+            "description": "Fundraisers fees and architects fees for urgent stone work project and a new block of toilets",
+            "currency": "GBP",
+            "amountAwarded": 35000,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-05T00:00:00+00:00",
+                    "endDate": "2017-04-06T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Church Thornhill Square",
+                    "id": "GB-CHC-1130552",
+                    "charityNumber": "1130552",
+                    "postalCode": "N1 1BQ",
+                    "url": "http://www.standrewsislington.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 351,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-396",
+            "title": "Grant to Christ Church Highbury",
+            "description": "Repairs to and replacement of stonework, mortar and iron cramps on the South East pinacle",
+            "currency": "GBP",
+            "amountAwarded": 18000,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-06T00:00:00+00:00",
+                    "endDate": "2017-04-07T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "postalCode": "N5 1SA",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 396,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-362",
+            "title": "Grant to St James' Church Islington",
+            "description": "To install an overhead projecter and screen",
+            "currency": "GBP",
+            "amountAwarded": "18k",
+            "awardDate": "43236",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-07T00:00:00+00:00",
+                    "endDate": "2017-04-08T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St James' Church Islington",
+                    "id": "360G-Cloudesley-Org:8",
+                    "postalCode": "N1 7DS",
+                    "url": "http://www.stjamesislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 362,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-383",
+            "title": "Grant to St Mark's Church",
+            "description": "Works to the fabric of the church building as detailed in Quinquennial Report.",
+            "currency": "GBP",
+            "amountAwarded": 30000,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-08T00:00:00+00:00",
+                    "endDate": "2017-04-09T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mark's Church",
+                    "id": "360G-Cloudesley-Org:11",
+                    "postalCode": "N4 3LD",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 383,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-409",
+            "title": "Grant to St Andrew's Whitehall Park",
+            "description": "SCBP Small Grant (2) - Towards replacing broken window panes",
+            "currency": "GBP",
+            "amountAwarded": 2000,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-09T00:00:00+00:00",
+                    "endDate": "2017-04-10T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Andrew's Whitehall Park",
+                    "id": "GB-CHC-1152160",
+                    "charityNumber": "1152160",
+                    "postalCode": "N19 3BG",
+                    "url": "http://www.standrewsn19.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 409,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-389",
+            "title": "Grant to St John the Evangelist",
+            "description": "Urgent repairs to the fabric of the building",
+            "currency": "GBP",
+            "amountAwarded": 6000,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-10T00:00:00+00:00",
+                    "endDate": "2017-04-11T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St John the Evangelist",
+                    "id": "360G-Cloudesley-Org:16",
+                    "postalCode": "N19 4PZ",
+                    "url": "http://www.stjohnsarchway.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 389,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-399",
+            "title": "Grant to St Silas Pentonville",
+            "description": "Stonework repairs to the north aisle wall",
+            "currency": "GBP",
+            "amountAwarded": 35750,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-11T00:00:00+00:00",
+                    "endDate": "2017-04-12T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Silas Pentonville",
+                    "id": "360G-Cloudesley-Org:19",
+                    "postalCode": "N1 9UL",
+                    "url": "http://www.saint-silas.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 399,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-366",
+            "title": "Grant to St Thomas Finsbury Park",
+            "description": "Works identified in Quinquennial Survey",
+            "currency": "GBP",
+            "amountAwarded": 30000,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-12T00:00:00+00:00",
+                    "endDate": "2017-04-13T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Thomas Finsbury Park",
+                    "id": "360G-Cloudesley-Org:21",
+                    "postalCode": "N4 2QY",
+                    "url": "http://www.stthomaschurch.co.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 366,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-410",
+            "title": "Grant to Our Most Holy Redeemer Clerkenwell",
+            "description": "SCBP Small Grant (2) - Installation of secondary glazing in the parish hall",
+            "currency": "GBP",
+            "amountAwarded": 3000,
+            "awardDate": "2018-05-16T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-13T00:00:00+00:00",
+                    "endDate": "2017-04-14T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Our Most Holy Redeemer Clerkenwell",
+                    "id": "360G-Cloudesley-Org:23",
+                    "postalCode": "EC1R 4QE",
+                    "url": "http://holyredeemerclerkenwell.com/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 410,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-394",
+            "title": "Grant to Our Most Holy Redeemer Clerkenwell",
+            "description": "SCBP Small Grant (3)- Insulation of pipework in the boiler room",
+            "currency": "GBP",
+            "amountAwarded": 1350,
+            "awardDate": "2018-05-28T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-14T00:00:00+00:00",
+                    "endDate": "2017-04-15T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Our Most Holy Redeemer Clerkenwell",
+                    "id": "360G-Cloudesley-Org:23",
+                    "postalCode": "EC1R 4QE",
+                    "url": "http://holyredeemerclerkenwell.com/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 394,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-373",
+            "title": "Grant to St Mary Islington",
+            "description": "Portico works",
+            "currency": "GBP",
+            "amountAwarded": 50000,
+            "awardDate": "2018-05-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-15T00:00:00+00:00",
+                    "endDate": "2017-04-16T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Mary Islington",
+                    "id": "GB-CHC-1131900",
+                    "charityNumber": "1131900",
+                    "postalCode": "N1 2TX",
+                    "url": "http://www.stmaryislington.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 373,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-419",
+            "title": "Grant to Emmanuel Church",
+            "description": "SCBP Small Grant (2)- Solar PV System on the church roof - Additional funding from Allchurches Trust",
+            "currency": "GBP",
+            "amountAwarded": "3 thousand pounds",
+            "awardDate": "2018-05-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-16T00:00:00+00:00",
+                    "endDate": "2017-04-17T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Emmanuel Church",
+                    "id": "360G-Cloudesley-Org:12",
+                    "postalCode": "N7 6DU",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 419,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-393",
+            "title": "Grant to St Stephen Canonbury",
+            "description": "Works identified in Quinqennial Report",
+            "currency": "GBP",
+            "amountAwarded": 15000,
+            "awardDate": "2018-05-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-17T00:00:00+00:00",
+                    "endDate": "2017-04-18T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Stephen Canonbury",
+                    "id": "360G-Cloudesley-Org:20",
+                    "postalCode": "N1 2DF",
+                    "url": "http://www.ststephenscanonbury.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 393,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-20",
+            "title": "Grant to St Jude and St Paul Mildmay Grove",
+            "currency": "GBP",
+            "amountAwarded": "£26,000",
+            "awardDate": "17/11/2015",
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-18T00:00:00+00:00",
+                    "endDate": "2017-04-19T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Jude and St Paul Mildmay Grove",
+                    "id": "360G-Cloudesley-Org:9",
+                    "url": "http://www.sjsp.org.uk/"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 20,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "id": "360G-Cloudesley-23",
+            "title": "99000",
+            "description": "Replace and develop sound and vision system",
+            "currency": "GBP",
+            "amountAwarded": 14240,
+            "plannedDates": [
+                {
+                    "startDate": "2016-04-19T00:00:00+00:00",
+                    "endDate": "2017-04-20T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Emmanuel Hornsey Road",
+                    "id": "360G-Cloudesley-Org:12",
+                    "url": "http://www.tollingtonparish.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 23,
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "title": "Grant to Christ Church Highbury",
+            "description": "Repairs to gallery stairs and south west stairs; replacement of octagon roof ladders",
+            "currency": "GBP",
+            "amountAwarded": 7600,
+            "awardDate": "2017-11-29T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-14T00:00:00+00:00",
+                    "endDate": "2017-02-14T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "Christ Church Highbury",
+                    "id": "360G-Cloudesley-Org:6",
+                    "postalCode": "N5 1SA",
+                    "url": "http://www.christchurchhighbury.com"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 290,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "title": "Grant to St George and All Saints Church",
+            "description": "Commemorative Grant - Repair glass doors; redecorate the foyer",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2017-12-07T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-02-27T00:00:00+00:00",
+                    "endDate": "2017-02-27T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St George and All Saints Church",
+                    "id": "GB-CHC-1134714",
+                    "charityNumber": "1134714",
+                    "postalCode": "N7 0ND",
+                    "url": "http://www.stgeorgestufnellpark.org"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 317,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        },
+        {
+            "title": "Grant to St Augustine's Highbury New Park",
+            "description": "SCBP Small Grant- Replace broken and louvre windows (total 6) in SE vestries & NE lower vestry with double glazing",
+            "currency": "GBP",
+            "amountAwarded": 10000,
+            "awardDate": "2018-04-04T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2016-03-07T00:00:00+00:00",
+                    "endDate": "2017-03-08T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "name": "St Augustine's Highbury New Park",
+                    "id": "GB-CHC-1132698",
+                    "charityNumber": "1132698",
+                    "postalCode": "N5 2DR",
+                    "url": "http://www.staugustine.org.uk"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-205959"
+                }
+            ],
+            "Request No": 378,
+            "beneficiaryLocation": [
+                {
+                    "name": "Islington",
+                    "geoCode": "E09000019",
+                    "geoCodeType": "LONB"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Church"
+                }
+            ],
+            "dateModified": "2018-11-23T00:00:00+00:00",
+            "dataSource": "http://www.cloudesley.org.uk/",
+            "Extra notes": "data made deliberately invalid for testing purposes"
+        }
+    ]
+}

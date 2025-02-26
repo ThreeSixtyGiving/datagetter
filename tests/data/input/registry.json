@@ -1,0 +1,99 @@
+[
+  {
+    "title": "Test ABC publisher",
+    "description": "",
+    "identifier": "abrokenfilefile",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "license_name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "issued": "2018-06-21",
+    "modified": "2022-04-27T08:05:23.000+0000",
+    "publisher": {
+      "name": "ABC Trust",
+      "website": "http://example.com/",
+      "logo": "https://example.com/Logo_RGB.jpg",
+      "prefix": "360G-TEST",
+      "last_published": "2022-09-05",
+      "org_id": "GB-CHC-000000"
+    },
+    "distribution": [
+      {
+        "downloadURL": "http://localhost:8888/stuff.json",
+        "accessURL": "",
+        "title": "Test 404 json"
+      }
+    ]
+  },
+  {
+    "title": "Test ABC publisher 2",
+    "description": "",
+    "identifier": "aninvalidfile",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "license_name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "issued": "2018-06-21",
+    "modified": "2022-04-27T08:05:23.000+0000",
+    "publisher": {
+      "name": "ABC Trust",
+      "website": "http://example.com/",
+      "logo": "https://example.com/Logo_RGB.jpg",
+      "prefix": "360G-TEST1",
+      "last_published": "2022-09-05",
+      "org_id": "GB-CHC-000000"
+    },
+    "distribution": [
+      {
+        "downloadURL": "http://localhost:8888/invalid_file.xlsx",
+        "accessURL": "",
+        "title": "Test invalid file"
+      }
+    ]
+  },
+  {
+    "title": "Test ABC publisher 3",
+    "description": "",
+    "identifier": "conversionerrorsfile",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "license_name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "issued": "2018-06-21",
+    "modified": "2022-04-27T08:05:23.000+0000",
+    "publisher": {
+      "name": "ABC Trust",
+      "website": "http://example.com/",
+      "logo": "https://example.com/Logo_RGB.jpg",
+      "prefix": "360G-TEST2",
+      "last_published": "2022-09-05",
+      "org_id": "GB-CHC-000000"
+    },
+    "distribution": [
+      {
+        "downloadURL": "http://localhost:8888/conversion_errors.xlsx",
+        "accessURL": "",
+        "title": "Conversion errors file"
+      }
+    ]
+  },
+  {
+    "title": "Test ABC publisher 4",
+    "description": "",
+    "identifier": "validfile",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "license_name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "issued": "2018-06-21",
+    "modified": "2022-04-27T08:05:23.000+0000",
+    "publisher": {
+      "name": "ABC Trust",
+      "website": "http://example.com/",
+      "logo": "https://example.com/Logo_RGB.jpg",
+      "prefix": "360G-TEST3",
+      "last_published": "2022-09-05",
+      "org_id": "GB-CHC-000000"
+    },
+    "distribution": [
+      {
+        "downloadURL": "http://localhost:8888/valid.xlsx",
+        "accessURL": "",
+        "title": "valid file"
+      }
+    ]
+  }
+]
+
