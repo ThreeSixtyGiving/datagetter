@@ -1,0 +1,171 @@
+{
+    "grants": [
+        {
+            "id": "360G-ExampleFunder-2020-21_001",
+            "title": "Grant to Orange Gardens",
+            "description": "Towards the rebuilding of the historic orangery",
+            "currency": "GBP",
+            "amountAwarded": 25000,
+            "awardDate": "2020-09-05T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2020-09-05T00:00:00+00:00",
+                    "endDate": "2022-03-04T00:00:00+00:00",
+                    "duration": 18
+                },
+                {
+                    "startDate": "2020-11-05T00:00:00+00:00",
+                    "endDate": "2022-11-04T00:00:00+00:00",
+                    "duration": 24
+                },
+                {
+                    "startDate": "2020-12-05T00:00:00+00:00",
+                    "endDate": "2021-12-04T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "id": "GB-CHC-1092948",
+                    "name": "Orange Gardens",
+                    "charityNumber": "1092948",
+                    "companyNumber": "00945932",
+                    "postalCode": "CF10 1DZ"
+                },
+                {
+                    "id": "360G-ExampleFunder-ORG-Turquiose-Foundation",
+                    "name": "Turquiose Foundation",
+                    "postalCode": "HD1 8SW"
+                },
+                {
+                    "id": "GB-COH-02399277",
+                    "name": "Pink Playing Field",
+                    "companyNumber": "02399277",
+                    "postalCode": "LE67 2GH"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-123456",
+                    "name": "Example Funder"
+                },
+                {
+                    "id": "GB-CHC-123457",
+                    "name": "Example Funder"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Major grants"
+                },
+                {
+                    "title": "Major grants"
+                },
+                {
+                    "title": "Major grants"
+                }
+            ],
+            "beneficiaryLocation": [
+                {
+                    "name": "Wales"
+                },
+                {
+                    "name": "Yorkshire and The Humber"
+                },
+                {
+                    "name": "East Midlands"
+                }
+            ],
+            "dateModified": "2023-03-01T00:00:00+00:00",
+            "dataSource": "https://www.example.com",
+            "cat": 1,
+            "dog": 1
+        },
+        {
+            "id": "360G-ExampleFunder-2020-21_004",
+            "title": "Grant to Maroon Gallery",
+            "description": "Towards the annual art exhibition at the Maroon Gallery",
+            "currency": "GBP",
+            "amountAwarded": 5000,
+            "awardDate": "2020-07-05T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2020-07-05T00:00:00+00:00",
+                    "endDate": "2021-07-04T00:00:00+00:00",
+                    "duration": 12
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "id": "GB-COH-03142872",
+                    "name": "Maroon Gallery",
+                    "companyNumber": "03142872",
+                    "postalCode": "RG40 3EE"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-123458",
+                    "name": "Example Funder"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Small grants"
+                }
+            ],
+            "beneficiaryLocation": [
+                {
+                    "name": "South East England"
+                }
+            ],
+            "dateModified": "2023-03-01T00:00:00+00:00",
+            "dataSource": "https://www.example.com",
+            "cat": 1,
+            "dog": 1
+        },
+        {
+            "id": "360G-ExampleFunder-2020-21_005",
+            "title": "Grant to Grey Scout Group",
+            "description": "Towards the roof repairs for the scout hut",
+            "currency": "GBP",
+            "amountAwarded": 600,
+            "awardDate": "2020-11-05T00:00:00+00:00",
+            "plannedDates": [
+                {
+                    "startDate": "2020-11-05T00:00:00+00:00",
+                    "endDate": "2021-01-04T00:00:00+00:00",
+                    "duration": 2
+                }
+            ],
+            "recipientOrganization": [
+                {
+                    "id": "GB-CHC-1162693",
+                    "name": "Grey Scout Group",
+                    "charityNumber": "1162693",
+                    "postalCode": "WA3 3TR"
+                }
+            ],
+            "fundingOrganization": [
+                {
+                    "id": "GB-CHC-123459",
+                    "name": "Example Funder"
+                }
+            ],
+            "grantProgramme": [
+                {
+                    "title": "Small grants"
+                }
+            ],
+            "beneficiaryLocation": [
+                {
+                    "name": "North West England"
+                }
+            ],
+            "dateModified": "2023-03-01T00:00:00+00:00",
+            "dataSource": "https://www.example.com",
+            "cat": 1,
+            "dog": 1
+        }
+    ]
+}
