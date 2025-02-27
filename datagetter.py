@@ -46,7 +46,7 @@ def main():
         action="store",
         type=str,
         help="Specify a git branch of the 360Giving schema",
-        default="master",
+        default="main",
     )
 
     parser.add_argument(
