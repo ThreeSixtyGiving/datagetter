@@ -104,4 +104,7 @@ venv.bak/
 .mypy_cache/
 
 .ve/
-data
+/data
+cache_dir
+cache_datagetter.db
+tests/data/fetched_output
