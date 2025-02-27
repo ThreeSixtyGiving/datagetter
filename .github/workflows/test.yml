@@ -17,6 +17,8 @@ jobs:
 
     # Install
     - run: pip install .
+    - run: pip install -r requirements_dev.txt
+    - run: py.test -s -v ./tests/test.py
     # Run tool
     - run: datagetter.py --limit-downloads 8
     # Check output is created in expected structure
@@ -28,9 +30,6 @@ jobs:
     - run: ls ./data/json_all/
     - run: ls ./data/json_valid/
     - run: ls ./data/original/
-    # Check the metadata blocks look OK
-    - run: grep -A 8 "datagetter_metadata" ./data/data_all.json
-    - run: grep "datagetter_metadata" ./data/data_all.json | wc -l | grep "8"
     # Basic test for cached data
     - run: rm -rf ./data/
     - run: datagetter.py --limit-downloads 8
