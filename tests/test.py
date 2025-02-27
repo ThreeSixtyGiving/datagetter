@@ -69,7 +69,10 @@ class DatagetterArgs(object):
 def test_expected_output(test_server):
     getter_args = DatagetterArgs()
     # remove any existing data
-    shutil.rmtree(getter_args.data_dir)
+    try:
+        shutil.rmtree(getter_args.data_dir)
+    except FileNotFoundError:
+        pass
 
     # Run the datagetter
     get(getter_args)
