@@ -55,3 +55,5 @@ attrs>=21.2.0,<21.3.0
 openpyxl>=2.6.4,<3.1
 # 2.6.4 is the last v2 release, in 2019, but 3.0 only removes support for Py3.5, Breaking changes begin in 3.1.
 # Changelog: https://openpyxl.readthedocs.io/en/stable/changes.html
+
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@a3f238a6e80032a2a68b7ce32186db2c1ad2a577

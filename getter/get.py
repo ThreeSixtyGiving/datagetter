@@ -14,7 +14,8 @@ from requests.adapters import HTTPAdapter
 
 import email.headerregistry  # (content-disposition header parser)
 import strict_rfc3339
-from jsonschema import validate, ValidationError, FormatChecker
+from lib360dataquality.cove.schema import Schema360
+from lib360dataquality.cove.threesixtygiving import common_checks_360
 import getter.cache as cache
 
 acceptable_licenses = [
@@ -115,6 +116,25 @@ def mkdirs(data_dir, exist_ok=False):
             mkdirs(data_dir, exist_ok=False)
         else:
             exit
+
+
+class ValidationError(Exception):
+    def __init__(self, errors_count, errors):
+        self.errors_count = errors_count
+        self.errors = errors
+        message = f"Dataset has {errors_count} validation errors"
+        super().__init__(message)
+
+
+def validate(working_dir, data):
+    context = {"file_type": "json"}
+    os.makedirs(working_dir, exist_ok=True)
+    schema = Schema360(working_dir)
+    common_checks_360(context, working_dir, data, schema, test_classes=[])
+    validation_errors_count = context["validation_errors_count"]
+    if validation_errors_count > 0:
+        validation_errors = context["validation_errors"]
+        raise ValidationError(validation_errors_count, validation_errors)
 
 
 def fetch_and_convert(args, dataset, schema_path, schema_package_path):
@@ -295,17 +315,15 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
 
         # We can only do continue with the JSON if it did successfully convert.
         if metadata.get("json"):
-            format_checker = FormatChecker()
             if args.validate:
                 try:
                     with open(json_file_name, "r") as fp:
-                        with open(schema_package_path) as pkg_fp:
-                            validate(
-                                json.load(fp),
-                                json.load(pkg_fp),
-                                format_checker=format_checker,
-                            )
-                except (ValidationError, ValueError) as e:
+                        working_dir = os.path.join(
+                            args.data_dir, "validation", dataset["identifier"]
+                        )
+                        data = json.load(fp)
+                        validate(working_dir, data)
+                except ValidationError as e:
                     print(
                         f"Warning: File {json_file_name} does not conform to 360Giving standard"
                     )
@@ -315,9 +333,8 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
                     metadata["error"] = (
                         "File does not conform to the 360Giving standard"
                     )
-                    # print(f"Error message: {e.message}")
-                    # print(f"Error instance: {e.instance}")
-                    print(f"Error path: {e.path}")
+                    print(e)
+                    # print(json.dumps(e.errors, indent=4))
                 else:
                     metadata["valid"] = True
 
@@ -382,7 +399,6 @@ def get(args):
     )
 
     if args.test_file:
-        format_checker = FormatChecker()
         convert_spreadsheet(
             args.test_file,
             "tmp_test_file.json",
@@ -391,14 +407,12 @@ def get(args):
             schema_package_path,
         )
         with open("tmp_test_file.json", "r") as fp:
-            with open(schema_package_path) as pkg_fp:
-                try:
-                    validate(
-                        json.load(fp), json.load(pkg_fp), format_checker=format_checker
-                    )
-                except ValidationError as e:
-                    print(e)
-                    print("Validation error")
+            try:
+                data = json.load(fp)
+                working_dir = os.path.join(args.data_dir, "validation", "tmp_test_file")
+                validate(working_dir, data)
+            except ValidationError as e:
+                print(e)
             return
 
     try:

@@ -25,15 +25,30 @@ defusedxml==0.7.1
 et-xmlfile==2.0.0
     # via openpyxl
 flattentool==0.26.0
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   libcove
 idna==3.10
     # via requests
 ijson==3.3.0
-    # via flattentool
+    # via
+    #   flattentool
+    #   lib360dataquality
+json-merge-patch==0.2
+    # via lib360dataquality
 jsonref==1.1.0
-    # via flattentool
+    # via
+    #   flattentool
+    #   libcove
 jsonschema==3.2.0
+    # via
+    #   -r requirements.in
+    #   lib360dataquality
+    #   libcove
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@a3f238a6e80032a2a68b7ce32186db2c1ad2a577
     # via -r requirements.in
+libcove==0.31.0
+    # via lib360dataquality
 lxml==5.3.0
     # via flattentool
 odfpy==1.4.1
@@ -52,16 +67,29 @@ pyrsistent==0.20.0
     # via jsonschema
 pysocks==1.7.1
     # via requests
+python-dateutil==2.9.0.post0
+    # via lib360dataquality
 pytz==2024.2
     # via flattentool
+rangedict==0.1.7
+    # via lib360dataquality
 requests[socks]==2.32.3
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   libcove
+rfc3339-validator==0.1.4
+    # via libcove
 rfc3987==1.3.8
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   libcove
 schema==0.7.7
     # via flattentool
 six==1.16.0
-    # via jsonschema
+    # via
+    #   jsonschema
+    #   python-dateutil
+    #   rfc3339-validator
 strict-rfc3339==0.7
     # via -r requirements.in
 transaction==5.0
