@@ -31,17 +31,32 @@ et-xmlfile==2.0.0
 exceptiongroup==1.2.2
     # via pytest
 flattentool==0.26.0
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   libcove
 idna==3.10
     # via requests
 ijson==3.3.0
-    # via flattentool
+    # via
+    #   flattentool
+    #   lib360dataquality
 iniconfig==2.0.0
     # via pytest
+json-merge-patch==0.2
+    # via lib360dataquality
 jsonref==1.1.0
-    # via flattentool
+    # via
+    #   flattentool
+    #   libcove
 jsonschema==3.2.0
+    # via
+    #   -r requirements.in
+    #   lib360dataquality
+    #   libcove
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@a3f238a6e80032a2a68b7ce32186db2c1ad2a577
     # via -r requirements.in
+libcove==0.31.0
+    # via lib360dataquality
 lxml==5.3.1
     # via flattentool
 mypy-extensions==1.0.0
@@ -74,16 +89,29 @@ pysocks==1.7.1
     # via requests
 pytest==8.3.4
     # via -r requirements_dev.in
+python-dateutil==2.9.0.post0
+    # via lib360dataquality
 pytz==2025.1
     # via flattentool
+rangedict==0.1.7
+    # via lib360dataquality
 requests[socks]==2.32.3
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   libcove
+rfc3339-validator==0.1.4
+    # via libcove
 rfc3987==1.3.8
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   libcove
 schema==0.7.7
     # via flattentool
 six==1.17.0
-    # via jsonschema
+    # via
+    #   jsonschema
+    #   python-dateutil
+    #   rfc3339-validator
 strict-rfc3339==0.7
     # via -r requirements.in
 tomli==2.2.1
