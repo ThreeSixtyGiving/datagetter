@@ -1,5 +1,6 @@
 import itertools
 import json
+import logging
 import os
 import shutil
 import tempfile
@@ -132,7 +133,8 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
         dataset["datagetter_metadata"] = metadata
 
         if not dataset["license"] in acceptable_licenses + unacceptable_licenses:
-            raise ValueError("Unrecognised license " + dataset["license"])
+            logging.warning(f"Unrecognised license " + dataset["license"])
+            return dataset
 
         url = dataset["distribution"][0]["downloadURL"]
 

@@ -2,6 +2,7 @@ import os
 import shutil
 import apsw
 import hashlib
+import logging
 
 DATABASE_NAME = "cache_datagetter.db"
 CACHE_DIR = "cache_dir"
@@ -23,14 +24,16 @@ def setup_database():
         )
         con.close()
     except Exception as e:
-        raise DatagetterCacheError(e)
+        logging.error(f"Error setting up database: {e}")
+        return False
 
 
 def setup_cache_dir():
     try:
         os.makedirs(CACHE_DIR, exist_ok=True)
     except Exception as e:
-        raise DatagetterCacheError(e)
+        logging.error(f"Error setting up cache directory: {e}")
+        return False
 
 
 def hash_file(original_file_path):
