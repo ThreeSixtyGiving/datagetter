@@ -5,6 +5,7 @@ import hashlib
 
 DATABASE_NAME = "cache_datagetter.db"
 CACHE_DIR = "cache_dir"
+DATABASE_FILE = os.path.abspath(DATABASE_NAME)
 
 
 class DatagetterCacheError(Exception):
@@ -99,3 +100,12 @@ def update_cache(json_file_name, file_hash_str, file_identifier, file_type):
         shutil.copy(json_file_name, CACHE_DIR)
     except Exception as e:
         raise DatagetterCacheError(e)
+
+
+def delete_cache():
+    """Removes all cache files and databases"""
+    try:
+        shutil.rmtree(CACHE_DIR)
+        os.remove(DATABASE_FILE)
+    except Exception as e:
+        print(e)
