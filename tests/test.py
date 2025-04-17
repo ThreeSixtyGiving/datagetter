@@ -56,14 +56,8 @@ def test_server():
 
 
 class DatagetterArgs(object):
-    test_file = None
     limit_downloads = None
     publisher_prefixes = None
-    no_convert = False
-    no_download = False
-    convert_big_files = True
-    validate = True
-    convert = True
 
     local_registry = os.path.join(TEST_DATA_DIR, "input", "registry.json")
     download = True
