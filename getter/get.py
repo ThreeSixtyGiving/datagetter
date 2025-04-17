@@ -6,16 +6,19 @@ import tempfile
 import time
 import traceback
 from multiprocessing import Pool
-
-import flattentool
 import requests
 from urllib3.util import Retry
 from requests.adapters import HTTPAdapter
-
+from decimal import Decimal
 import email.headerregistry  # (content-disposition header parser)
 import strict_rfc3339
+
 from lib360dataquality.cove.schema import Schema360
+from lib360dataquality.cove.settings import COVE_CONFIG
 from lib360dataquality.cove.threesixtygiving import common_checks_360
+from libcove.lib.converters import convert_spreadsheet
+from libcove.config import LibCoveConfig
+
 import getter.cache as cache
 
 
@@ -80,44 +83,6 @@ session.mount("https://", HTTPAdapter(max_retries=retries))
 session.mount("http://", HTTPAdapter(max_retries=retries))
 
 
-def convert_spreadsheet(
-    input_path, converted_path, file_type, schema_path, schema_package_path
-):
-    encoding = "utf-8-sig"
-    if file_type == "csv":
-        tmp_dir = tempfile.mkdtemp()
-        destination = os.path.join(tmp_dir, "grants.csv")
-        shutil.copy(input_path, destination)
-        try:
-            with open(destination, encoding="utf-8-sig") as main_sheet_file:
-                main_sheet_file.read()
-        except UnicodeDecodeError:
-            try:
-                with open(destination, encoding="cp1252") as main_sheet_file:
-                    main_sheet_file.read()
-                encoding = "cp1252"
-            except UnicodeDecodeError:
-                encoding = "latin_1"
-        input_name = tmp_dir
-    else:
-        input_name = input_path
-
-    flattentool.unflatten(
-        input_name,
-        output_name=converted_path,
-        input_format=file_type,
-        root_list_path="grants",
-        root_id="",
-        schema=schema_path,
-        convert_titles=True,
-        encoding=encoding,
-        metatab_schema=schema_package_path,
-        metatab_name="Meta",
-        metatab_vertical_orientation=True,
-        default_configuration="hashcomments",
-    )
-
-
 def mkdirs(data_dir, exist_ok=False):
     try:
         os.makedirs(data_dir, exist_ok=exist_ok)
@@ -146,20 +111,74 @@ class ValidationError(Exception):
         super().__init__(message)
 
 
-def validate(working_dir, data):
+def validate(working_dir, schema_360, data):
     context = {"file_type": "json"}
-    os.makedirs(working_dir, exist_ok=True)
-    schema = Schema360(working_dir)
-    common_checks_360(context, working_dir, data, schema, test_classes=[])
+    common_checks_360(context, working_dir, data, schema_360, test_classes=[])
     validation_errors_count = context["validation_errors_count"]
     if validation_errors_count > 0:
         validation_errors = context["validation_errors"]
         raise ValidationError(validation_errors_count, validation_errors)
 
 
+def convert_spreadsheet_file(
+    working_dir, schema_360, original_file_path, json_file_name, file_type
+):
+    context = {"file_type": file_type}
+
+    lib_cove_config = LibCoveConfig()
+    lib_cove_config.config.update(COVE_CONFIG)
+    context.update(
+        convert_spreadsheet(
+            working_dir,
+            "null",  # upload url (not needed)
+            original_file_path,
+            file_type,
+            lib_cove_config,
+            schema_360.schema_file,
+            schema_360.pkg_schema_file,
+        )
+    )
+
+    # Check for any schema extension
+    with open(context["converted_path"], encoding="utf-8") as fp:
+        json_data = json.load(fp, parse_float=Decimal)
+
+        if extension_metadatas := schema_360.resolve_extension(json_data):
+            # Delete old coverted data
+            os.unlink(context["converted_path"])
+            # Re-convert using the newly resolve_extension
+            context.update(
+                convert_spreadsheet(
+                    working_dir,
+                    "null",  # upload url (not needed)
+                    original_file_path,
+                    file_type,
+                    lib_cove_config,
+                    schema_360.schema_file,
+                    schema_360.pkg_schema_file,
+                )
+            )
+            context["extension_metadatas"] = extension_metadatas
+
+    shutil.move(context["converted_path"], json_file_name)
+
+
 def fetch_and_convert(args, dataset, schema_path, schema_package_path):
     """Fetches and converts 360 Giving datasets. Must return a dataset"""
 
+    working_dir = os.path.join(args.data_dir, "validation", dataset["identifier"])
+    working_dir = os.path.abspath(working_dir)
+    os.makedirs(working_dir)
+
+    # schema_360 is per file due to possible schema extensions being present
+
+    schema_360 = Schema360(
+        working_dir,
+        local_pkg_schema_path=schema_package_path,
+        local_grant_schema_path=schema_path,
+    )
+
+    # If we're only fetching particular publishers filter here
     if args.publisher_prefixes:
         if dataset["publisher"]["prefix"] not in args.publisher_prefixes:
             dataset["datagetter_metadata"] = {"downloads": False}
