@@ -7,13 +7,6 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        "--no-download",
-        dest="download",
-        action="store_false",
-        help="Don't download any files only convert existing data",
-    )
-
-    parser.add_argument(
         "--local-registry",
         dest="local_registry",
         action="store",
@@ -21,11 +14,6 @@ def main():
         default=False,
     )
 
-    parser.add_argument("--no-convert", dest="convert", action="store_false")
-    parser.add_argument(
-        "--no-convert-big-files", dest="convert_big_files", action="store_false"
-    )
-    parser.add_argument("--no-validate", dest="validate", action="store_false")
     parser.add_argument("--data-dir", dest="data_dir", action="store", default="data")
     parser.add_argument(
         "--threads", dest="threads", action="store", type=int, default=4
@@ -56,14 +44,6 @@ def main():
         action="store",
         type=str,
         help="Only download for selected publishers",
-    )
-
-    parser.add_argument(
-        "--file",
-        dest="test_file",
-        action="store",
-        type=str,
-        help="Test a particular file",
     )
 
     args = parser.parse_args()

@@ -156,96 +156,79 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
 
         url = dataset["distribution"][0]["downloadURL"]
 
-        if args.download:
-            metadata["datetime_downloaded"] = (
-                strict_rfc3339.now_to_rfc3339_localoffset()
-            )
+        metadata["datetime_downloaded"] = strict_rfc3339.now_to_rfc3339_localoffset()
 
+        try:
+            print("Fetching %s" % url)
+            res = session.get(
+                url,
+                headers={
+                    "User-Agent": "datagetter (https://github.com/ThreeSixtyGiving/datagetter)"
+                },
+            )
+            res.raise_for_status()
+
+            metadata["downloads"] = True
+        except Exception as e:
+            if isinstance(e, KeyboardInterrupt):
+                raise
+
+            print(
+                "\n\nDownload {} failed for dataset {}\n".format(
+                    url, dataset["identifier"]
+                )
+            )
+            traceback.print_exc()
+            metadata["downloads"] = False
+            metadata["error"] = str(e)
+
+            if not isinstance(e, requests.exceptions.HTTPError):
+                return dataset
+
+        content_type = res.headers.get("content-type", "").split(";")[0].lower()
+        file_type = None
+
+        if content_type and content_type in CONTENT_TYPE_MAP:
+            file_type = CONTENT_TYPE_MAP[content_type]
+        elif "content-disposition" in res.headers:
+            # When webserver serves file as an attachment rather than direct download
+            # We need to parse the header to get the filename and filetype.
+            # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
+            content_disposition = res.headers.get("content-disposition")
+            filename = dict(
+                email.headerregistry.parser.parse_content_disposition_header(
+                    content_disposition
+                ).params
+            ).get("filename")
+            if filename:
+                file_type = filename.split(".")[-1]
+
+        # Last resort to guessing the file type
+        if not file_type:
+            file_type = url.split(".")[-1]
+        if file_type not in CONTENT_TYPE_MAP.values():
+            print(f"Unrecognised file type {file_type}")
+            return dataset
+
+        # Check that the downloaded json file is valid json and not junk from the webserver
+        # e.g. a 500 error being output without the proper status code.
+        if file_type == "json":
             try:
-                print("Fetching %s" % url)
-                res = session.get(
-                    url,
-                    headers={
-                        "User-Agent": "datagetter (https://github.com/ThreeSixtyGiving/datagetter)"
-                    },
-                )
-                res.raise_for_status()
-
-                metadata["downloads"] = True
-            except Exception as e:
-                if isinstance(e, KeyboardInterrupt):
-                    raise
-
-                print(
-                    "\n\nDownload {} failed for dataset {}\n".format(
-                        url, dataset["identifier"]
-                    )
-                )
-                traceback.print_exc()
+                json.loads(res.text)
+            except ValueError:
+                print("Warning: JSON file provided by webserver is invalid")
                 metadata["downloads"] = False
-                metadata["error"] = str(e)
-
-                if not isinstance(e, requests.exceptions.HTTPError):
-                    return dataset
-
-            content_type = res.headers.get("content-type", "").split(";")[0].lower()
-            file_type = None
-
-            if content_type and content_type in CONTENT_TYPE_MAP:
-                file_type = CONTENT_TYPE_MAP[content_type]
-            elif "content-disposition" in res.headers:
-                # When webserver serves file as an attachment rather than direct download
-                # We need to parse the header to get the filename and filetype.
-                # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
-                content_disposition = res.headers.get("content-disposition")
-                filename = dict(
-                    email.headerregistry.parser.parse_content_disposition_header(
-                        content_disposition
-                    ).params
-                ).get("filename")
-                if filename:
-                    file_type = filename.split(".")[-1]
-
-            # Last resort to guessing the file type
-            if not file_type:
-                file_type = url.split(".")[-1]
-            if file_type not in CONTENT_TYPE_MAP.values():
-                print(f"Unrecognised file type {file_type}")
+                metadata["error"] = "Invalid JSON file provided by webserver"
                 return dataset
 
-            # Check that the downloaded json file is valid json and not junk from the webserver
-            # e.g. a 500 error being output without the proper status code.
-            if file_type == "json":
-                try:
-                    json.loads(res.text)
-                except ValueError:
-                    print("Warning: JSON file provided by webserver is invalid")
-                    metadata["downloads"] = False
-                    metadata["error"] = "Invalid JSON file provided by webserver"
-                    return dataset
+        metadata["file_type"] = file_type
 
-            metadata["file_type"] = file_type
+        original_file_path = os.path.join(
+            args.data_dir, "original", f"{dataset['identifier']}.{file_type}"
+        )
 
-            original_file_path = os.path.join(
-                args.data_dir, "original", f"{dataset['identifier']}.{file_type}"
-            )
-
-            with open(original_file_path, "wb") as fp:
-                fp.write(res.content)
-        else:
-            # --no-download arg
-
-            # We require the metadata to exist, it won't if the file failed to download correctly
-            if metadata["downloads"] == False:
-                print(
-                    f"Skipping {dataset['identifier']} as it was not marked as successfully downloaded"
-                )
-                return dataset
-
-            file_type = metadata["file_type"]
-            original_file_path = os.path.join(
-                args.data_dir, "original", f"{dataset['identifier']}.{file_type}"
-            )
+        with open(original_file_path, "wb") as fp:
+            fp.write(res.content)
 
         json_file_name = os.path.join(
             args.data_dir, "json_all", f"{dataset['identifier']}.json"
@@ -253,90 +236,81 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
 
         metadata["file_size"] = os.path.getsize(original_file_path)
 
-        if args.convert and (
-            args.convert_big_files or metadata["file_size"] < 10 * 1024 * 1024
-        ):
-            if file_type == "json":
-                os.link(original_file_path, json_file_name)
-                metadata["json"] = json_file_name
-            else:
+        if file_type == "json":
+            os.link(original_file_path, json_file_name)
+            metadata["json"] = json_file_name
+        else:
+            # Convert spreadsheet to JSON and cache the conversion
+            try:
+                print(f"Running convert on {original_file_path} to {json_file_name}")
+
                 try:
-                    print(
-                        f"Running convert on {original_file_path} to {json_file_name}"
+                    # Hash the file
+                    file_hash_str = cache.hash_file(original_file_path)
+                    # Check if we have already converted the file
+                    cached_file_path = cache.get_file(file_hash_str)
+
+                    # We have converted the file before so copy from the CACHE_DIR
+                    if cached_file_path:
+                        try:
+                            shutil.copy(cached_file_path, json_file_name)
+                            print("Cache hit")
+                        except (FileNotFoundError, PermissionError):
+                            cached_file_path = False
+                except cache.DatagetterCacheError as e:
+                    print(f"Continuing without cache (hash/get): {e}")
+                    cached_file_path = False
+
+                if not cached_file_path:
+                    convert_spreadsheet_file(
+                        working_dir,
+                        schema_360,
+                        original_file_path,
+                        json_file_name,
+                        file_type,
                     )
 
                     try:
-                        # Hash the file
-                        file_hash_str = cache.hash_file(original_file_path)
-                        # Check if we have already converted the file
-                        cached_file_path = cache.get_file(file_hash_str)
-
-                        # We have converted the file before so copy from the CACHE_DIR
-                        if cached_file_path:
-                            try:
-                                shutil.copy(cached_file_path, json_file_name)
-                                print("Cache hit")
-                            except (FileNotFoundError, PermissionError):
-                                cached_file_path = False
-                    except cache.DatagetterCacheError as e:
-                        print(f"Continuing without cache (hash/get): {e}")
-                        cached_file_path = False
-
-                    if not cached_file_path:
-                        convert_spreadsheet(
-                            original_file_path,
+                        cache.update_cache(
                             json_file_name,
+                            file_hash_str,
+                            dataset["identifier"],
                             file_type,
-                            schema_path,
-                            schema_package_path,
                         )
-                        try:
-                            cache.update_cache(
-                                json_file_name,
-                                file_hash_str,
-                                dataset["identifier"],
-                                file_type,
-                            )
-                        except cache.DatagetterCacheError as e:
-                            print(f"Continuing without cache (update error): {e}")
+                    except cache.DatagetterCacheError as e:
+                        print(f"Continuing without cache (update error): {e}")
 
-                except KeyboardInterrupt:
-                    raise
-                except Exception:
-                    print(f"Warning: Unflattening failed for file {original_file_path}")
-                    traceback.print_exc()
-                    metadata["json"] = None
-                    metadata["valid"] = False
-                    metadata["error"] = "Could not unflatten file"
-                else:
-                    metadata["json"] = json_file_name
+            except KeyboardInterrupt:
+                raise
+            except Exception:
+                print(f"Warning: Unflattening failed for file {original_file_path}")
+                traceback.print_exc()
+                metadata["json"] = None
+                metadata["valid"] = False
+                metadata["error"] = "Could not unflatten file"
+            else:
+                metadata["json"] = json_file_name
 
         metadata["acceptable_license"] = dataset["license"] in acceptable_licenses
 
         # We can only do continue with the JSON if it did successfully convert.
         if metadata.get("json"):
-            if args.validate:
-                try:
-                    with open(json_file_name, "r") as fp:
-                        working_dir = os.path.join(
-                            args.data_dir, "validation", dataset["identifier"]
-                        )
-                        data = json.load(fp)
-                        validate(working_dir, data)
-                except ValidationError as e:
-                    print(
-                        f"Warning: File {json_file_name} does not conform to 360Giving standard"
-                    )
-                    # Non-standard data breaks tools so get rid of it
-                    metadata["json"] = None
-                    metadata["valid"] = False
-                    metadata["error"] = (
-                        "File does not conform to the 360Giving standard"
-                    )
-                    print(e)
-                    # print(json.dumps(e.errors, indent=4))
-                else:
-                    metadata["valid"] = True
+            try:
+                with open(json_file_name, "r") as fp:
+                    data = json.load(fp)
+                    validate(working_dir, schema_360, data)
+            except ValidationError as e:
+                print(
+                    f"Warning: File {json_file_name} does not conform to 360Giving standard"
+                )
+                # Non-standard data breaks tools so get rid of it
+                metadata["json"] = None
+                metadata["valid"] = False
+                metadata["error"] = "File does not conform to the 360Giving standard"
+                print(e)
+                # print(json.dumps(e.errors, indent=4))
+            else:
+                metadata["valid"] = True
 
             if metadata["valid"]:
                 os.link(
@@ -398,23 +372,6 @@ def get(args):
         f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-package-schema.json"
     )
 
-    if args.test_file:
-        convert_spreadsheet(
-            args.test_file,
-            "tmp_test_file.json",
-            "xlsx",
-            schema_path,
-            schema_package_path,
-        )
-        with open("tmp_test_file.json", "r") as fp:
-            try:
-                data = json.load(fp)
-                working_dir = os.path.join(args.data_dir, "validation", "tmp_test_file")
-                validate(working_dir, data)
-            except ValidationError as e:
-                print(e)
-            return
-
     try:
         cache.setup_database()
         cache.setup_cache_dir()
@@ -422,16 +379,11 @@ def get(args):
         print(e)
         print("Continuing without cache")
 
-    if not args.download:
-        mkdirs(args.data_dir, True)
-        data_all = json.load(open("%s/data_all.json" % args.data_dir))
-
-    elif args.local_registry:
+    if args.local_registry:
         mkdirs(args.data_dir, False)
         with open(args.local_registry) as fp:
             data_all = json.load(fp)
-
-    elif args.download:
+    else:
         mkdirs(args.data_dir, False)
 
         # Try the registry 5 times to get valid data.json output
@@ -450,10 +402,6 @@ def get(args):
                 print("Warning: Registry JSON data error, retrying in 1 second...")
                 time.sleep(1)
                 continue
-
-    else:
-        print("No source for data")
-        exit(1)
 
     if args.limit_downloads:
         data_all = data_all[: args.limit_downloads]
