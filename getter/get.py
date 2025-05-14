@@ -127,6 +127,10 @@ def convert_spreadsheet_file(
 
     lib_cove_config = LibCoveConfig()
     lib_cove_config.config.update(COVE_CONFIG)
+
+    # Enable internal request cache within lib-cove
+    lib_cove_config.config["cache_all_requests"] = True
+
     context.update(
         convert_spreadsheet(
             working_dir,
