@@ -16,7 +16,12 @@ def main():
 
     parser.add_argument("--data-dir", dest="data_dir", action="store", default="data")
     parser.add_argument(
-        "--threads", dest="threads", action="store", type=int, default=4
+        "--threads",
+        dest="threads",
+        action="store",
+        type=int,
+        default=4,
+        help="Defaults to 4 threads",
     )
 
     parser.add_argument(
