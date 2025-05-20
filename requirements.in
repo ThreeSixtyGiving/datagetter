@@ -57,5 +57,5 @@ openpyxl>=2.6.4,<3.1
 # Changelog: https://openpyxl.readthedocs.io/en/stable/changes.html
 
 
-lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@15da33ba511910b10a0f997005d5b2f25689628d
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@e97c049cdac3ac37381c96c34f57347be6c2cd83
 # Used for validation and conversion
