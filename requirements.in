@@ -1,18 +1,3 @@
-flattentool>=0.16.0,<0.27.0
-# https://github.com/OpenDataServices/flatten-tool
-# Changelog says the next version beyond 0.26 will drop Py3.8 support:
-#   https://github.com/OpenDataServices/flatten-tool/blob/main/CHANGELOG.md
-
-jsonschema>=3.2.0,<4
-# https://pypi.org/project/jsonschema/
-# https://github.com/python-jsonschema/jsonschema
-# jsonschema 3.2 was the last v3 release, in 2019.
-# Uses Semantic Versioning: https://python-jsonschema.readthedocs.io/en/stable/faq/#how-do-jsonschema-version-numbers-work
-# Changelog: https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst#v320
-# Note than Python 3.8 is reaching EOL, but jsonschema v4.1.0 is the first to claim support for Python 3.10,
-# but the datagetter with 3.2.0 does seem to work on Python 3.10.
-# Given the core nature of jsonschema to CoVE etc, I'm guessing the upgrade to v4 may be involved.
-
 strict-rfc3339==0.7
 # https://pypi.org/project/strict-rfc3339/
 # https://github.com/danielrichman/strict-rfc3339
@@ -44,18 +29,5 @@ apsw>=3.35,<3.47
 # Changelog: https://rogerbinns.github.io/apsw/changes.html
 
 
-# for Compatibility with CoVE
-attrs>=21.2.0,<21.3.0
-# Last 21.2.x release was 2021.
-# Can't find a stated version policy, versions seem to have breaking changes in minor versions.
-# Check the changelog when updating this entry.
-# Changelog: https://www.attrs.org/en/stable/changelog.html#id22
-
-# for Compatibility with CoVE
-openpyxl>=2.6.4,<3.1
-# 2.6.4 is the last v2 release, in 2019, but 3.0 only removes support for Py3.5, Breaking changes begin in 3.1.
-# Changelog: https://openpyxl.readthedocs.io/en/stable/changes.html
-
-
-lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@e97c049cdac3ac37381c96c34f57347be6c2cd83
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@59a64eebc6229d282ac74b25a08f35cf26814742
 # Used for validation and conversion
