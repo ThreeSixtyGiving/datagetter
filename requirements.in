@@ -29,5 +29,5 @@ apsw>=3.35,<3.47
 # Changelog: https://rogerbinns.github.io/apsw/changes.html
 
 
-lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@59a64eebc6229d282ac74b25a08f35cf26814742
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@cf58dc98e978edd50bbef30608ff6613b0148b72
 # Used for validation and conversion

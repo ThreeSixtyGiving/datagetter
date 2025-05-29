@@ -40,7 +40,7 @@ jsonschema==3.2.0
     # via
     #   lib360dataquality
     #   libcove
-lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@59a64eebc6229d282ac74b25a08f35cf26814742
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@cf58dc98e978edd50bbef30608ff6613b0148b72
     # via -r requirements.in
 libcove==0.31.0
     # via lib360dataquality

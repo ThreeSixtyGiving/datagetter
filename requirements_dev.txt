@@ -7,9 +7,7 @@
 apsw==3.46.1.0
     # via -r requirements.in
 attrs==21.2.0
-    # via
-    #   -r requirements.in
-    #   jsonschema
+    # via jsonschema
 backports-datetime-fromisoformat==2.0.3
     # via flattentool
 black==24.8.0
@@ -31,9 +29,7 @@ et-xmlfile==2.0.0
 exceptiongroup==1.2.2
     # via pytest
 flattentool==0.26.0
-    # via
-    #   -r requirements.in
-    #   libcove
+    # via libcove
 idna==3.10
     # via requests
 ijson==3.3.0
@@ -50,10 +46,9 @@ jsonref==1.1.0
     #   libcove
 jsonschema==3.2.0
     # via
-    #   -r requirements.in
     #   lib360dataquality
     #   libcove
-lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@e97c049cdac3ac37381c96c34f57347be6c2cd83
+lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git@cf58dc98e978edd50bbef30608ff6613b0148b72
     # via -r requirements.in
 libcove==0.31.0
     # via lib360dataquality
@@ -64,9 +59,7 @@ mypy-extensions==1.0.0
 odfpy==1.4.1
     # via flattentool
 openpyxl==3.0.10
-    # via
-    #   -r requirements.in
-    #   flattentool
+    # via flattentool
 packaging==24.2
     # via
     #   black
