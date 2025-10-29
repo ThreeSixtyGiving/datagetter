@@ -208,6 +208,7 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
                 headers={
                     "User-Agent": "datagetter (https://github.com/ThreeSixtyGiving/datagetter)"
                 },
+                timeout=(30, 120),
             )
             res.raise_for_status()
 
