@@ -5,6 +5,7 @@ import shutil
 import tempfile
 import time
 import traceback
+import urllib3
 from multiprocessing import Pool
 import requests
 from urllib3.util import Retry
@@ -226,7 +227,7 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
             metadata["downloads"] = False
             metadata["error"] = str(e)
 
-            if not isinstance(e, requests.exceptions.HTTPError):
+            if not isinstance(e, requests.exceptions.HTTPError) and not isinstance(e, urllib3.exceptions.SSLError):
                 return dataset
 
         content_type = res.headers.get("content-type", "").split(";")[0].lower()
