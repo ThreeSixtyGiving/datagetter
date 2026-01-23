@@ -409,11 +409,12 @@ def file_cache(url):
 
 
 def get(args):
+    base_url = "https://raw.githubusercontent.com/ThreeSixtyGiving/standard"
     schema_path = file_cache(
-        f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-schema.json"
+        f"{base_url}/{args.schema_branch}/schema/360-giving-schema.json"
     )
     schema_package_path = file_cache(
-        f"https://raw.githubusercontent.com/ThreeSixtyGiving/standard/{args.schema_branch}/schema/360-giving-package-schema.json"
+        f"{base_url}/{args.schema_branch}/schema/360-giving-package-schema.json"
     )
 
     try:
