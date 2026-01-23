@@ -8,3 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: psf/black@stable
+        with:
+          options: >
+            --line-length 119
+            --exclude src
