@@ -5,12 +5,7 @@ import socketserver
 import os
 import threading
 import time
-from pathlib import Path
-import sys
 import shutil
-
-sys.path.append(str(Path(__file__).resolve().parent.parent))
-
 from getter.get import get
 import getter.cache as cache
 
