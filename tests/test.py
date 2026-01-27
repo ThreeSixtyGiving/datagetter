@@ -5,13 +5,9 @@ import socketserver
 import os
 import threading
 import time
-from pathlib import Path
-import sys
 import shutil
 from getter.get import get
 import getter.cache as cache
-
-sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 TEST_SERVER_PORT = 8888  # this is what the registry.json urls are expecting
