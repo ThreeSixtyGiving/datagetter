@@ -222,7 +222,6 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
                     url, dataset["identifier"]
                 )
             )
-            traceback.print_exc()
             metadata["downloads"] = False
             metadata["error"] = str(e)
 
