@@ -60,4 +60,5 @@ optional arguments:
 
 ## Developers
 
-If you are updating `requirements.txt` please make sure you use version 3.8 of Python.
+If you are updating `requirements.txt` please make sure you use version 3.12 of Python.
+0
