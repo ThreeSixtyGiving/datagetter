@@ -1,3 +1,4 @@
 -r requirements.in
-pytest
 black
+pip-tools
+pytest
