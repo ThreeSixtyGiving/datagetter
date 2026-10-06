@@ -87,7 +87,7 @@ strict-rfc3339==0.7
     # via -r requirements.in
 transaction==5.1
     # via zodb
-urllib3==2.7.0
+urllib3==2.8.0
     # via requests
 xmltodict==1.0.4
     # via flattentool

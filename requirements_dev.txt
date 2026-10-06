@@ -123,7 +123,7 @@ strict-rfc3339==0.7
     # via -r requirements.in
 transaction==5.1
     # via zodb
-urllib3==2.7.0
+urllib3==2.8.0
     # via requests
 wheel==0.47.0
     # via pip-tools
