@@ -31,3 +31,6 @@ apsw>=3.35,<3.47
 
 lib360dataquality @ git+https://github.com/ThreeSixtyGiving/dataquality.git
 # Used for validation and conversion
+
+certifi>=2026.10.19
+# Response to eMudhra/emSign CA certificate security incident.
