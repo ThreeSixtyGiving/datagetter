@@ -6,7 +6,7 @@ import os
 import threading
 import time
 import shutil
-from getter.get import get
+from getter.get import get, extension_from_url
 import getter.cache as cache
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
@@ -108,3 +108,21 @@ def test_expected_output(test_server):
         expected = json.load(open(os.path.join(expected_data_dir, "json_all", file)))
         fetched = json.load(open(os.path.join(fetched_output_dir, "json_all", file)))
         assert fetched == expected
+
+
+@pytest.mark.parametrize(
+    "url,expected",
+    [
+        ("https://example.org/data/grants.xlsx", "xlsx"),
+        ("https://example.org/data/GRANTS.CSV", "csv"),
+        ("https://example.org/grants.json?version=2#top", "json"),
+        (
+            "https://bucket.s3.amazonaws.com/c3d3ef44.xlsx?X-Amz-Signature=abc.def",
+            "xlsx",
+        ),
+        ("https://example.org/dataset/resource/123/download", ""),
+        ("https://example.org/", ""),
+    ],
+)
+def test_extension_from_url(url, expected):
+    assert extension_from_url(url) == expected

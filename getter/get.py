@@ -12,6 +12,8 @@ from urllib3.util import Retry
 from requests.adapters import HTTPAdapter
 from decimal import Decimal
 import email.headerregistry  # (content-disposition header parser)
+from pathlib import PurePosixPath
+from urllib.parse import urlparse
 import strict_rfc3339
 
 from lib360dataquality.cove.schema import Schema360
@@ -66,6 +68,15 @@ CONTENT_TYPE_MAP = {
     "text/csv": "csv",
     "application/vnd.oasis.opendocument.spreadsheet": "ods",
 }
+
+
+VALID_FILE_TYPES = set(CONTENT_TYPE_MAP.values())
+
+
+def extension_from_url(u):
+    """File extension (lower case, no dot) of the path of a URL, ignoring any
+    query string or fragment, or "" if there is none."""
+    return PurePosixPath(urlparse(u).path).suffix.lstrip(".").lower()
 
 
 data_valid = []
@@ -247,11 +258,13 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
             if filename:
                 file_type = filename.split(".")[-1]
 
-        # Last resort to guessing the file type
-        if not file_type:
-            file_type = url.split(".")[-1]
-        if file_type not in CONTENT_TYPE_MAP.values():
-            print(f"Unrecognised file type {file_type}")
+        # Last resorts to guessing the file type: the extension of the URL we
+        # asked for, then of the URL we ended up at, as a download link without
+        # an extension can redirect to one that has it.
+        candidates = [file_type, extension_from_url(url), extension_from_url(res.url)]
+        file_type = next((c for c in candidates if c in VALID_FILE_TYPES), None)
+        if file_type is None:
+            print(f"Unrecognised file type {next((c for c in candidates if c), '')}")
             return dataset
 
         # Check that the downloaded json file is valid json and not junk from the webserver
