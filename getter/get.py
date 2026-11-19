@@ -5,7 +5,6 @@ import shutil
 import tempfile
 import time
 import traceback
-import urllib3
 from multiprocessing import Pool
 import requests
 from urllib3.util import Retry
@@ -190,8 +189,6 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
             return dataset
 
     try:
-        res = None
-
         metadata = dataset.get("datagetter_metadata", {})
         dataset["datagetter_metadata"] = metadata
 
@@ -215,9 +212,6 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
 
             metadata["downloads"] = True
         except Exception as e:
-            if isinstance(e, KeyboardInterrupt):
-                raise
-
             print(
                 "\n\nDownload {} failed for dataset {}\n".format(
                     url, dataset["identifier"]
@@ -226,8 +220,7 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
             metadata["downloads"] = False
             metadata["error"] = str(e)
 
-            if not isinstance(e, requests.exceptions.HTTPError) and not isinstance(e, urllib3.exceptions.SSLError):
-                return dataset
+            return dataset
 
         content_type = res.headers.get("content-type", "").split(";")[0].lower()
         file_type = None
