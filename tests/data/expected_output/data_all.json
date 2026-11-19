@@ -25,7 +25,7 @@
         "datagetter_metadata": {
             "datetime_downloaded": "2025-02-27T14:41:15+00:00",
             "downloads": false,
-            "error": "Invalid JSON file provided by webserver"
+            "error": "404 Client Error: File not found for url: http://localhost:8888/stuff.json"
         }
     },
     {
