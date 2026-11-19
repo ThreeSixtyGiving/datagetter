@@ -12,6 +12,8 @@ from urllib3.util import Retry
 from requests.adapters import HTTPAdapter
 from decimal import Decimal
 import email.headerregistry  # (content-disposition header parser)
+from pathlib import PurePosixPath
+from urllib.parse import unquote, urlsplit
 import strict_rfc3339
 
 from lib360dataquality.cove.schema import Schema360
@@ -82,6 +84,31 @@ retries = Retry(
 
 session.mount("https://", HTTPAdapter(max_retries=retries))
 session.mount("http://", HTTPAdapter(max_retries=retries))
+
+
+def _infer_file_type(original_url, response):
+    content_type = response.headers.get("content-type", "").split(";", 1)[0].strip().lower()
+    if content_type in CONTENT_TYPE_MAP:
+        return CONTENT_TYPE_MAP[content_type]
+
+    supported_types = CONTENT_TYPE_MAP.values()
+    content_disposition = response.headers.get("content-disposition")
+    if content_disposition:
+        # The attachment can provide a filename even when the URL has no extension.
+        header = email.headerregistry.parser.parse_content_disposition_header(content_disposition)
+        filename = dict(header.params).get("filename")
+        if filename:
+            extension = PurePosixPath(filename).suffix.removeprefix(".").lower()
+            if extension in supported_types:
+                return extension
+
+    for url in (original_url, response.url):
+        if url:
+            path = unquote(urlsplit(url).path)
+            extension = PurePosixPath(path).suffix.removeprefix(".").lower()
+            if extension in supported_types:
+                return extension
+    return None
 
 
 def mkdirs(data_dir, exist_ok=False):
@@ -229,29 +256,9 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
             if not isinstance(e, requests.exceptions.HTTPError) and not isinstance(e, urllib3.exceptions.SSLError):
                 return dataset
 
-        content_type = res.headers.get("content-type", "").split(";")[0].lower()
-        file_type = None
-
-        if content_type and content_type in CONTENT_TYPE_MAP:
-            file_type = CONTENT_TYPE_MAP[content_type]
-        elif "content-disposition" in res.headers:
-            # When webserver serves file as an attachment rather than direct download
-            # We need to parse the header to get the filename and filetype.
-            # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition
-            content_disposition = res.headers.get("content-disposition")
-            filename = dict(
-                email.headerregistry.parser.parse_content_disposition_header(
-                    content_disposition
-                ).params
-            ).get("filename")
-            if filename:
-                file_type = filename.split(".")[-1]
-
-        # Last resort to guessing the file type
+        file_type = _infer_file_type(url, res)
         if not file_type:
-            file_type = url.split(".")[-1]
-        if file_type not in CONTENT_TYPE_MAP.values():
-            print(f"Unrecognised file type {file_type}")
+            print("Unrecognised file type")
             return dataset
 
         # Check that the downloaded json file is valid json and not junk from the webserver

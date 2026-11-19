@@ -6,6 +6,12 @@ import os
 import threading
 import time
 import shutil
+from types import SimpleNamespace
+from unittest.mock import Mock
+
+import requests
+
+import getter.get as getter
 from getter.get import get
 import getter.cache as cache
 
@@ -108,3 +114,64 @@ def test_expected_output(test_server):
         expected = json.load(open(os.path.join(expected_data_dir, "json_all", file)))
         fetched = json.load(open(os.path.join(fetched_output_dir, "json_all", file)))
         assert fetched == expected
+
+
+@pytest.mark.parametrize(
+    "original_path, final_path, headers, expected",
+    [
+        ("/download", "/grants.XLSX?X-Amz-Signature=example", {"Content-Type": "binary/octet-stream"}, "xlsx"),
+        (
+            "/grants.csv",
+            "/grants.xlsx",
+            {"Content-Type": "application/vnd.oasis.opendocument.spreadsheet; charset=UTF-8"},
+            "ods",
+        ),
+        ("/grants.csv", "/grants.xlsx", {"Content-Disposition": 'attachment; filename="grants.ODS"'}, "ods"),
+        ("/grants.CSV?download=1#source", "/grants.xlsx", {}, "csv"),
+        ("/download", "/grants.xlsx", {"Content-Disposition": 'attachment; filename="export.bin"'}, "xlsx"),
+        ("/download?name=grants.csv", "/download?name=grants.xlsx", {}, None),
+    ],
+)
+def test_fetch_and_convert_guesses_file_type(tmp_path, monkeypatch, original_path, final_path, headers, expected):
+    source_url = f"https://registry.example{original_path}"
+    data_dir = tmp_path / "output"
+    getter.mkdirs(data_dir)
+    args = SimpleNamespace(data_dir=data_dir, publisher_prefixes=None)
+    dataset = {
+        "identifier": "test-grants",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "distribution": [{"downloadURL": source_url}],
+    }
+    response = requests.Response()
+    response.status_code = 200
+    response.url = f"https://publisher.example{final_path}"
+    response.headers.update(headers)
+    response._content = b"mock spreadsheet"
+    download = Mock(return_value=response)
+    monkeypatch.setattr(getter.session, "get", download)
+    monkeypatch.setattr(getter, "Schema360", Mock())
+    monkeypatch.setattr(getter.cache, "get_file", lambda *_: None)
+    monkeypatch.setattr(getter.cache, "update_cache", Mock())
+    monkeypatch.setattr(getter, "validate", Mock())
+    for result_list in ("data_valid", "data_acceptable_license", "data_acceptable_license_valid"):
+        monkeypatch.setattr(getter, result_list, [])
+
+    def write_json(_directory, _schema, _source, destination, _file_type):
+        with open(destination, "w") as output:
+            json.dump({"grants": []}, output)
+
+    convert = Mock(side_effect=write_json)
+    monkeypatch.setattr(getter, "convert_spreadsheet_file", convert)
+    result = getter.fetch_and_convert(args, dataset, None, None)
+
+    download.assert_called_once()
+    assert download.call_args.args == (source_url,)
+    assert result["datagetter_metadata"]["downloads"] is True
+    assert result["datagetter_metadata"].get("file_type") == expected
+    if expected:
+        convert.assert_called_once()
+        assert convert.call_args.args[-1] == expected
+        assert (data_dir / "original" / f"test-grants.{expected}").read_bytes() == response.content
+    else:
+        convert.assert_not_called()
+        assert not list((data_dir / "original").iterdir())
