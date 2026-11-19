@@ -6,6 +6,14 @@ import os
 import threading
 import time
 import shutil
+from io import BytesIO
+from types import SimpleNamespace
+from unittest.mock import Mock
+
+import requests
+from openpyxl import Workbook
+
+import getter.get as getter_module
 from getter.get import get
 import getter.cache as cache
 
@@ -108,3 +116,84 @@ def test_expected_output(test_server):
         expected = json.load(open(os.path.join(expected_data_dir, "json_all", file)))
         fetched = json.load(open(os.path.join(fetched_output_dir, "json_all", file)))
         assert fetched == expected
+
+
+@pytest.mark.parametrize(
+    ("failure", "error"),
+    [
+        ("unreadable", "Could not open spreadsheet"),
+        ("invalid_data", "Could not unflatten spreadsheet data"),
+        ("unexpected_error", "Could not unflatten file"),
+    ],
+)
+def test_reports_distinct_spreadsheet_failures(
+    monkeypatch, tmp_path, capsys, failure, error
+):
+    data_dir = tmp_path / "data"
+    getter_module.mkdirs(data_dir)
+    args = SimpleNamespace(data_dir=data_dir, publisher_prefixes=None)
+    url = "https://publisher.example/grants.xlsx"
+    dataset = {
+        "identifier": "example",
+        "distribution": [{"downloadURL": url}],
+        "license": getter_module.acceptable_licenses[0],
+    }
+
+    response = requests.Response()
+    response.url = url
+    response.status_code = 200
+    response.headers["Content-Type"] = (
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    if failure == "invalid_data":
+        workbook = Workbook()
+        sheet = workbook.active
+        sheet.title = "grants"
+        sheet.append(["Identifier", "Amount Awarded:0"])
+        sheet.append(["example", 1])
+        contents = BytesIO()
+        workbook.save(contents)
+        workbook.close()
+        response._content = contents.getvalue()
+    else:
+        response._content = b"Not an XLSX archive"
+
+    schema = {
+        "type": "object",
+        "properties": {
+            "id": {"type": "string", "title": "Identifier"},
+            "amountAwarded": {"type": "number", "title": "Amount Awarded"},
+        },
+    }
+    monkeypatch.setattr(getter_module.session, "get", Mock(return_value=response))
+    monkeypatch.setattr(
+        getter_module,
+        "Schema360",
+        Mock(return_value=Mock(schema_file=schema, pkg_schema_file=None)),
+    )
+    monkeypatch.setattr(cache, "get_file", Mock(return_value=False))
+    cache_update = Mock()
+    validate = Mock()
+    monkeypatch.setattr(cache, "update_cache", cache_update)
+    monkeypatch.setattr(getter_module, "validate", validate)
+    if failure == "unexpected_error":
+        monkeypatch.setattr(
+            getter_module,
+            "convert_spreadsheet_file",
+            Mock(side_effect=RuntimeError("conversion bug")),
+        )
+
+    result = getter_module.fetch_and_convert(args, dataset, None, None)
+
+    metadata = result["datagetter_metadata"]
+    assert metadata["error"] == error
+    assert metadata["downloads"] is True
+    assert metadata["valid"] is False
+    assert metadata["json"] is None
+    assert not (data_dir / "json_all" / "example.json").exists()
+    output = capsys.readouterr()
+    assert error in output.out
+    assert "example.xlsx" in output.out
+    assert "Traceback" in output.err
+    validate.assert_not_called()
+    cache_update.assert_not_called()
