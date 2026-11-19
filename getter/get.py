@@ -7,6 +7,8 @@ import time
 import traceback
 import urllib3
 from multiprocessing import Pool
+from xml.etree.ElementTree import ParseError
+from zipfile import BadZipFile
 import requests
 from urllib3.util import Retry
 from requests.adapters import HTTPAdapter
@@ -18,7 +20,11 @@ from lib360dataquality.cove.schema import Schema360
 from lib360dataquality.cove.settings import COVE_CONFIG
 from lib360dataquality.cove.threesixtygiving import common_checks_360
 from libcove.lib.converters import convert_spreadsheet
+from libcove.lib.exceptions import CoveInputDataError
 from libcove.config import LibCoveConfig
+from flattentool.exceptions import FlattenToolValueError
+from lxml.etree import XMLSyntaxError
+from openpyxl.utils.exceptions import InvalidFileException
 
 import getter.cache as cache
 
@@ -166,6 +172,27 @@ def convert_spreadsheet_file(
             context["extension_metadatas"] = extension_metadatas
 
     shutil.move(context["converted_path"], json_file_name)
+
+
+def spreadsheet_error_message(error, spreadsheet_path):
+    # LibCove wraps all converter exceptions, including failures unrelated to the input.
+    cause = (
+        getattr(error, "wrapped_err", error)
+        if isinstance(error, CoveInputDataError)
+        else error
+    )
+    if isinstance(
+        cause, (BadZipFile, InvalidFileException, ParseError, XMLSyntaxError)
+    ):
+        return "Could not open spreadsheet"
+    if isinstance(cause, OSError) and cause.filename:
+        if os.path.normcase(os.path.abspath(cause.filename)) == os.path.normcase(
+            os.path.abspath(spreadsheet_path)
+        ):
+            return "Could not open spreadsheet"
+    if isinstance(cause, FlattenToolValueError):
+        return "Could not unflatten spreadsheet data"
+    return "Could not unflatten file"
 
 
 def fetch_and_convert(args, dataset, schema_path, schema_package_path):
@@ -326,12 +353,13 @@ def fetch_and_convert(args, dataset, schema_path, schema_package_path):
 
             except KeyboardInterrupt:
                 raise
-            except Exception:
-                print(f"Warning: Unflattening failed for file {original_file_path}")
+            except Exception as error:
+                message = spreadsheet_error_message(error, original_file_path)
+                print(f"Warning: {message}: {original_file_path}")
                 traceback.print_exc()
                 metadata["json"] = None
                 metadata["valid"] = False
-                metadata["error"] = "Could not unflatten file"
+                metadata["error"] = message
             else:
                 metadata["json"] = json_file_name
 
